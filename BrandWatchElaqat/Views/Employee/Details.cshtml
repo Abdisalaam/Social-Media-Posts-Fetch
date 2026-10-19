@@ -1,0 +1,380 @@
+﻿@model BrandWatchElaqat.Models.ElaqatEmployee
+
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.ElaqatEmployeePage.PageTitleDetails;
+    HttpCookie cookie = Request.Cookies["Language"];
+    int counter = 0;
+    string msg = ViewBag.Message;
+
+
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+        }
+    }
+
+
+
+</head>
+
+
+<div class="layout-top-spacing">
+    <div class="row" id="cancel-row">
+
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div class="widget-content widget-content-area br-6">
+                <div class="col-xl-12 col-lg-12 col-sm-12">
+                    <h3 style="text-align:center">@BrandWatchElaqat.Resources.ElaqatEmployeePage.PageHeaderDetails</h3>
+                </div>
+                <div class="table-responsive mb-4 mt-4">
+                    <table id="myEmployeeTable" class="table table-hover non-hover" style="width:100%">
+                        <thead>
+                            <tr>
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.EmployeeName)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.Email)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.PhoneNumber)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.Role)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.RegisterDate)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.IsEmployeeActive)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.Action)
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.EmployeeName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.EmployeeEmail)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.PhoneNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.EmployeeRole)
+                                </td>
+                                <td>
+                                    @{
+                                        var _date = Model.RegisterDate.HasValue ? Model.RegisterDate.Value.ToString("dd/MM/yyyy") : "N/A";
+                                    }
+                                    @_date
+                                </td>
+                                @{
+                                    string empActivity = "";
+                                    if (Model.IsActive)
+                                    {
+                                        empActivity = BrandWatchElaqat.Resources.ElaqatEmployeePage.Active;
+                                    }
+                                    else
+                                    {
+                                        empActivity = BrandWatchElaqat.Resources.ElaqatEmployeePage.NotActive;
+                                    }
+                                }
+                                <td>
+                                    @empActivity
+                                </td>
+
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference1">
+                                            <a class="dropdown-item" href='@Url.Action("Edit", new { id = Model.Id })'>@BrandWatchElaqat.Resources.ElaqatEmployeePage.Edit</a>
+                                            <a class="dropdown-item" href='@Url.Action("ChangePassword", new {id = Model.Id})'>@BrandWatchElaqat.Resources.LoginPage.PageHeaderResetPassword</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div class="widget-content widget-content-area br-6">
+                <div class="col-xl-12 col-lg-12 col-sm-12">
+                    <h3 style="text-align:center">@BrandWatchElaqat.Resources.ElaqatEmployeePage.EmployeeActivity</h3>
+                </div>
+                <div class="table-responsive mb-4 mt-4">
+                    <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayName("#")
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.ActivityName)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.ActivityRecord)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.ActivityDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ElaqatEmployeePage.Action)
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.EmployeeActionHistories)
+                            {
+                                counter++;
+                                <tr>
+                                    <td>
+                                        @counter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ActionName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ActionRecord)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ActionDate)
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-dark btn-sm" href='@Url.Action("Details", "ClientProject",new {id = item.Id})'>@BrandWatchElaqat.Resources.ElaqatEmployeePage.Details</a>
+                                            <button type="button" class="btn btn-dark btn-sm dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference2">
+                                                <a class="dropdown-item" href='@Url.Action("AssignImprtedProjectToClient", "ClientProject",new {projectId = item.Id})'>@BrandWatchElaqat.Resources.ElaqatEmployeePage.Edit</a>
+                                                <a class="dropdown-item" href='@Url.Action("AssignImprtedProjectToClient", "ClientProject",new {projectId = item.Id})'>@BrandWatchElaqat.Resources.ElaqatEmployeePage.Delete</a>
+                                            </div>
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+                            }
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "Showing page _PAGE_ of _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "Search...",
+                            "sLengthMenu": "Results :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+                <script>
+                    $('#myEmployeeTable').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "Showing page _PAGE_ of _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "Search...",
+                            "sLengthMenu": "Results :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "إبحث...",
+                            "sLengthMenu": "النتائج :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+                <script>
+                    $('#myEmployeeTable').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "إبحث...",
+                            "sLengthMenu": "النتائج :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+            <script>
+                $('#html5-extension').DataTable({
+
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                        "sSearchPlaceholder": "إبحث...",
+                        "sLengthMenu": "النتائج :  _MENU_",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7
+                });
+            </script>
+            <script>
+                $('#myEmployeeTable').DataTable({
+
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                        "sSearchPlaceholder": "إبحث...",
+                        "sLengthMenu": "النتائج :  _MENU_",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7
+                });
+            </script>
+
+        }
+
+        if (!string.IsNullOrEmpty(msg))
+
+        {
+            <script type="text/javascript">
+            Snackbar.show({
+               text: '@msg',
+              pos: 'top-center'
+             });
+            </script>
+
+        }
+    }
+
+
+}
+
+

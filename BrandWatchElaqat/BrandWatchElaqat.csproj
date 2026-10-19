@@ -1,0 +1,2572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37566687-E6FB-4588-805E-D1FDE6330350}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrandWatchElaqat</RootNamespace>
+    <AssemblyName>BrandWatchElaqat</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AllowedMinAndMaxAndMultiOptionsMentionFilter.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Assignment.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorGroup.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BrandWatchClientProject.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckedMention.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProject.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProjectCategory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProjectQuerie.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProjectSite.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProjectSubCategory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClientProjectTwitterTopAuthor.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClintProjectCtegoryQueryID.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSource.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientProjectCategoryController.cs" />
+    <Compile Include="Controllers\ClientProjectController.cs" />
+    <Compile Include="Controllers\ClientProjectQuerieController.cs" />
+    <Compile Include="Controllers\ElaqatClientController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EmployeeMentionController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsBarDomainController.cs" />
+    <Compile Include="DBModelBrandWatch.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModelBrandWatch.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBModelBrandWatch.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBModelBrandWatch.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBModelBrandWatch.edmx</DependentUpon>
+      <CustomToolNamespace>BrandWatchElaqat.Models</CustomToolNamespace>
+    </Compile>
+    <Compile Include="ElaqatClient.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ElaqatEmployee.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Emotion.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeActionHistory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedAuthorGroup.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedCategory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedClientProjectSite.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedContentSource.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedEmotion.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedFaceBookMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedInstagramMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedLanguage.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedLocation.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedQuery.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedReactScoreEmotionality.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedReactScoreHarm.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedReactScoreOverall.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedRuleTag.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedSocialPanel.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedSubCatgory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedSubredditTopic.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedSubType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedTwitterAccountTypes.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedTwitterInterest.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedTwitterMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedTwitterProfession.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExcludedTwitterVerificationType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaceBookMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaceBookUserRole.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalMetric.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedAuthorGroup.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedCategory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedClientProjectSite.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedContentSource.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedDomains.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedEmotion.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedFaceBookMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedInstagramMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedLanguage.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedLocation.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedQuery.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedReactScoreEmotionality.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedReactScoreHarm.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedReactScoreOverall.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedRuleTag.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedSentiment.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedSocialPanel.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedSubCatgory.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedSubredditTopic.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedSubType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedTwitterAccountTypes.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedTwitterGender.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedTwitterInterest.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedTwitterMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedTwitterProfession.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncludedTwitterVerificationType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InstagramMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MediaPuplished.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MentionFilter.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MentionStatus.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MentionSubCategoryDetail.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClientProject.cs" />
+    <Compile Include="Models\ClientProjectCategory.cs" />
+    <Compile Include="Models\ClientProjectQuerie.cs" />
+    <Compile Include="Models\ElaqatClient.cs" />
+    <Compile Include="Models\ElaqatEmployee.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NewsBarDomain.cs" />
+    <Compile Include="Models\ProjectMention.cs" />
+    <Compile Include="Models\RegisterationModel.cs" />
+    <Compile Include="NewsBarDomain.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Priority.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectLocation.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectMention.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectRuleTag.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryContentSource.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QueryHighLightTerm.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QueryLanguage.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReactScoreEmotionality.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReactScoreHarm.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReactScoreOverall.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RedditNSFW.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RedditPoll.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ClientPage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientPage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ClientPage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientPage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DashBoard.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DashBoard.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DashBoard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DashBoard.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ElaqatEmployeePage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElaqatEmployeePage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ElaqatEmployeePage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElaqatEmployeePage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HomePage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HomePage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LayoutPage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LayoutPage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LayoutPage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LayoutPage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LoginPage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginPage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LoginPage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginPage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Mention.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mention.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Mention.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mention.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\NewsBarPage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsBarPage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\NewsBarPage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsBarPage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Projects.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Projects.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Projects.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Projects.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RegisterPage.ar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterPage.ar.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RegisterPage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterPage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sentiment.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiteDomain.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialPanel.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SourceType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="SubredditTopic.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterInterest.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterMentionType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterProfession.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterUserRole.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterVerification.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterVerificationType.cs">
+      <DependentUpon>DBModelBrandWatch.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utilites\MailManager.cs" />
+    <Compile Include="ViewModel\AudienceMapper.cs" />
+    <Compile Include="ViewModel\AuthorDataMapper.cs" />
+    <Compile Include="ViewModel\AuthorGroupMapper.cs" />
+    <Compile Include="ViewModel\AuthorMapper.cs" />
+    <Compile Include="ViewModel\AuthorVM.cs" />
+    <Compile Include="ViewModel\CategoryDetailsMapper.cs" />
+    <Compile Include="ViewModel\CategoryMapper.cs" />
+    <Compile Include="ViewModel\ChangePasswordVM.cs" />
+    <Compile Include="ViewModel\ClientProjectCategoryVM.cs" />
+    <Compile Include="ViewModel\ClientProjectSubCategoryVM.cs" />
+    <Compile Include="ViewModel\ClientProjectVM.cs" />
+    <Compile Include="ViewModel\ContentSourceMapper.cs" />
+    <Compile Include="ViewModel\DashBoardContentSourceVM.cs" />
+    <Compile Include="ViewModel\DashBoardVM.cs" />
+    <Compile Include="ViewModel\DomainVM.cs" />
+    <Compile Include="ViewModel\ElaqatClientVM.cs" />
+    <Compile Include="ViewModel\EmployeeVM.cs" />
+    <Compile Include="ViewModel\EntityInfoMapper.cs" />
+    <Compile Include="ViewModel\GlobalMetricsMapper.cs" />
+    <Compile Include="ViewModel\ImageInfoMapper.cs" />
+    <Compile Include="ViewModel\LocationMapper.cs" />
+    <Compile Include="ViewModel\MatchPositionsMapper.cs" />
+    <Compile Include="ViewModel\MentionFilterVM.cs" />
+    <Compile Include="ViewModel\MentionMapper.cs" />
+    <Compile Include="ViewModel\MentionVM.cs" />
+    <Compile Include="ViewModel\NewsBarFilterVM.cs" />
+    <Compile Include="ViewModel\NewsBarVM.cs" />
+    <Compile Include="ViewModel\ObjectMapper.cs" />
+    <Compile Include="ViewModel\ProfessionsMapper.cs" />
+    <Compile Include="ViewModel\ProjectMapper.cs" />
+    <Compile Include="ViewModel\ProjectMentionVM.cs" />
+    <Compile Include="ViewModel\ProjectRuleTagMapper.cs" />
+    <Compile Include="ViewModel\ProjectRuleTagVM.cs" />
+    <Compile Include="ViewModel\QueryMapper.cs" />
+    <Compile Include="ViewModel\ReleaseMentionOption.cs" />
+    <Compile Include="ViewModel\RequestResultsParameter.cs" />
+    <Compile Include="ViewModel\Root.cs" />
+    <Compile Include="ViewModel\SiteMapper.cs" />
+    <Compile Include="ViewModel\SubCategoryMapper.cs" />
+    <Compile Include="ViewModel\URLPreParer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentLTR\assets\css\apps\contacts.css" />
+    <Content Include="ContentLTR\assets\css\apps\invoice.css" />
+    <Content Include="ContentLTR\assets\css\apps\mailbox.css" />
+    <Content Include="ContentLTR\assets\css\apps\mailing-chat.css" />
+    <Content Include="ContentLTR\assets\css\apps\notes.css" />
+    <Content Include="ContentLTR\assets\css\apps\scrumboard.css" />
+    <Content Include="ContentLTR\assets\css\apps\todolist.css" />
+    <Content Include="ContentLTR\assets\css\authentication\form-1.css" />
+    <Content Include="ContentLTR\assets\css\authentication\form-2.css" />
+    <Content Include="ContentLTR\assets\css\chosen.css" />
+    <Content Include="ContentLTR\assets\css\components\cards\card.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-carousel.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-countdown.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-counter.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-list-group.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-media_object.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-modal.css" />
+    <Content Include="ContentLTR\assets\css\components\custom-sweetalert.css" />
+    <Content Include="ContentLTR\assets\css\components\tabs-accordian\custom-accordions.css" />
+    <Content Include="ContentLTR\assets\css\components\tabs-accordian\custom-tabs.css" />
+    <Content Include="ContentLTR\assets\css\components\timeline\custom-timeline.css" />
+    <Content Include="ContentLTR\assets\css\dashboard\dash_1.css" />
+    <Content Include="ContentLTR\assets\css\dashboard\dash_2.css" />
+    <Content Include="ContentLTR\assets\css\elements\alert.css" />
+    <Content Include="ContentLTR\assets\css\elements\avatar.css" />
+    <Content Include="ContentLTR\assets\css\elements\breadcrumb.css" />
+    <Content Include="ContentLTR\assets\css\elements\color_library.css" />
+    <Content Include="ContentLTR\assets\css\elements\custom-pagination.css" />
+    <Content Include="ContentLTR\assets\css\elements\custom-tree_view.css" />
+    <Content Include="ContentLTR\assets\css\elements\custom-typography.css" />
+    <Content Include="ContentLTR\assets\css\elements\infobox.css" />
+    <Content Include="ContentLTR\assets\css\elements\miscellaneous.css" />
+    <Content Include="ContentLTR\assets\css\elements\popover.css" />
+    <Content Include="ContentLTR\assets\css\elements\search.css" />
+    <Content Include="ContentLTR\assets\css\elements\tooltip.css" />
+    <Content Include="ContentLTR\assets\css\forms\bootstrap-form.css" />
+    <Content Include="ContentLTR\assets\css\forms\custom-clipboard.css" />
+    <Content Include="ContentLTR\assets\css\forms\switches.css" />
+    <Content Include="ContentLTR\assets\css\forms\theme-checkbox-radio.css" />
+    <Content Include="ContentLTR\assets\css\loader.css" />
+    <Content Include="ContentLTR\assets\css\main.css" />
+    <Content Include="ContentLTR\assets\css\pages\coming-soon\style.css" />
+    <Content Include="ContentLTR\assets\css\pages\contact_us.css" />
+    <Content Include="ContentLTR\assets\css\pages\error\style-400.css" />
+    <Content Include="ContentLTR\assets\css\pages\error\style-500.css" />
+    <Content Include="ContentLTR\assets\css\pages\error\style-503.css" />
+    <Content Include="ContentLTR\assets\css\pages\error\style-maintanence.css" />
+    <Content Include="ContentLTR\assets\css\pages\faq\faq.css" />
+    <Content Include="ContentLTR\assets\css\pages\faq\faq2.css" />
+    <Content Include="ContentLTR\assets\css\pages\helpdesk.css" />
+    <Content Include="ContentLTR\assets\css\pages\privacy\privacy.css" />
+    <Content Include="ContentLTR\assets\css\plugins.css" />
+    <Content Include="ContentLTR\assets\css\scrollspyNav.css" />
+    <Content Include="ContentLTR\assets\css\structure.css" />
+    <Content Include="ContentLTR\assets\css\tables\table-basic.css" />
+    <Content Include="ContentLTR\assets\css\users\account-setting.css" />
+    <Content Include="ContentLTR\assets\css\users\user-profile.css" />
+    <Content Include="ContentLTR\assets\css\widgets\modules-widgets.css" />
+    <Content Include="ContentLTR\assets\img\120x120.jpg" />
+    <Content Include="ContentLTR\assets\img\1280x857.jpg" />
+    <Content Include="ContentLTR\assets\img\175x115.jpg" />
+    <Content Include="ContentLTR\assets\img\200x200.jpg" />
+    <Content Include="ContentLTR\assets\img\300x300.jpg" />
+    <Content Include="ContentLTR\assets\img\350x250.jpg" />
+    <Content Include="ContentLTR\assets\img\400x168.jpg" />
+    <Content Include="ContentLTR\assets\img\400x300.jpg" />
+    <Content Include="ContentLTR\assets\img\509x343.jpg" />
+    <Content Include="ContentLTR\assets\img\600x300.jpg" />
+    <Content Include="ContentLTR\assets\img\640x426.jpg" />
+    <Content Include="ContentLTR\assets\img\90x90.jpg" />
+    <Content Include="ContentLTR\assets\img\ab-1.jpeg" />
+    <Content Include="ContentLTR\assets\img\arrow-down.png" />
+    <Content Include="ContentLTR\assets\img\bg.png" />
+    <Content Include="ContentLTR\assets\img\ca.png" />
+    <Content Include="ContentLTR\assets\img\contact-us-map-pin.svg" />
+    <Content Include="ContentLTR\assets\img\de.png" />
+    <Content Include="ContentLTR\assets\img\faq.svg" />
+    <Content Include="ContentLTR\assets\img\favicon.ico" />
+    <Content Include="ContentLTR\assets\img\fr.png" />
+    <Content Include="ContentLTR\assets\img\jp.png" />
+    <Content Include="ContentLTR\assets\img\mindset.svg" />
+    <Content Include="ContentLTR\assets\js\app.js" />
+    <Content Include="ContentLTR\assets\js\apps\contact.js" />
+    <Content Include="ContentLTR\assets\js\apps\custom-mailbox.js" />
+    <Content Include="ContentLTR\assets\js\apps\invoice.js" />
+    <Content Include="ContentLTR\assets\js\apps\mailbox-chat.js" />
+    <Content Include="ContentLTR\assets\js\apps\notes.js" />
+    <Content Include="ContentLTR\assets\js\apps\scrumboard.js" />
+    <Content Include="ContentLTR\assets\js\apps\todoList.js" />
+    <Content Include="ContentLTR\assets\js\authentication\form-1.js" />
+    <Content Include="ContentLTR\assets\js\authentication\form-2.js" />
+    <Content Include="ContentLTR\assets\js\chosen.jquery.js" />
+    <Content Include="ContentLTR\assets\js\chosen.jquery.min.js" />
+    <Content Include="ContentLTR\assets\js\chosen.proto.js" />
+    <Content Include="ContentLTR\assets\js\chosen.proto.min.js" />
+    <Content Include="ContentLTR\assets\js\clipboard\clipboard.min.js" />
+    <Content Include="ContentLTR\assets\js\components\custom-carousel.js" />
+    <Content Include="ContentLTR\assets\js\components\custom-countdown.js" />
+    <Content Include="ContentLTR\assets\js\components\custom-counter.js" />
+    <Content Include="ContentLTR\assets\js\components\notification\custom-snackbar.js" />
+    <Content Include="ContentLTR\assets\js\components\session-timeout\bootstrap-session-timeout.js" />
+    <Content Include="ContentLTR\assets\js\components\session-timeout\custom-bootstrap_session_timeout.js" />
+    <Content Include="ContentLTR\assets\js\components\ui-accordions.js" />
+    <Content Include="ContentLTR\assets\js\custom.js" />
+    <Content Include="ContentLTR\assets\js\dashboard\dash_1.js" />
+    <Content Include="ContentLTR\assets\js\dashboard\dash_2.js" />
+    <Content Include="ContentLTR\assets\js\elements\custom-search.js" />
+    <Content Include="ContentLTR\assets\js\elements\popovers.js" />
+    <Content Include="ContentLTR\assets\js\elements\tooltip.js" />
+    <Content Include="ContentLTR\assets\js\forms\bootstrap_validation\bs_validation_script.js" />
+    <Content Include="ContentLTR\assets\js\forms\custom-clipboard.js" />
+    <Content Include="ContentLTR\assets\js\ie11fix\fn.fix-padStart.js" />
+    <Content Include="ContentLTR\assets\js\libs\jquery-3.1.1.min.js" />
+    <Content Include="ContentLTR\assets\js\libs\jquery-ui.js" />
+    <Content Include="ContentLTR\assets\js\loader.js" />
+    <Content Include="ContentLTR\assets\js\pages\coming-soon\coming-soon.js" />
+    <Content Include="ContentLTR\assets\js\pages\faq\faq.js" />
+    <Content Include="ContentLTR\assets\js\pages\faq\faq2.js" />
+    <Content Include="ContentLTR\assets\js\pages\helpdesk.js" />
+    <Content Include="ContentLTR\assets\js\scrollspyNav.js" />
+    <Content Include="ContentLTR\assets\js\users\account-settings.js" />
+    <Content Include="ContentLTR\assets\js\widgets\modules-widgets.js" />
+    <Content Include="ContentLTR\bootstrap\css\bootstrap.css" />
+    <Content Include="ContentLTR\bootstrap\css\bootstrap.min.css" />
+    <Content Include="ContentLTR\bootstrap\js\bootstrap.js" />
+    <Content Include="ContentLTR\bootstrap\js\bootstrap.min.js" />
+    <Content Include="ContentLTR\bootstrap\js\popper.min.js" />
+    <Content Include="ContentLTR\Custom\CustomStyleSheet.css" />
+    <Content Include="ContentLTR\plugins\animate\animate.css" />
+    <Content Include="ContentLTR\plugins\apex\apexcharts.css" />
+    <Content Include="ContentLTR\plugins\apex\apexcharts.min.js" />
+    <Content Include="ContentLTR\plugins\apex\custom-apexcharts.js" />
+    <Content Include="ContentLTR\plugins\autocomplete\autocomplete.css" />
+    <Content Include="ContentLTR\plugins\autocomplete\countries.js" />
+    <Content Include="ContentLTR\plugins\autocomplete\demo.js" />
+    <Content Include="ContentLTR\plugins\autocomplete\jquery.autocomplete.js" />
+    <Content Include="ContentLTR\plugins\autocomplete\jquery.mockjax.js" />
+    <Content Include="ContentLTR\plugins\blockui\custom-blockui.js" />
+    <Content Include="ContentLTR\plugins\blockui\jquery.blockUI.min.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-maxlength\bootstrap-maxlength.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-maxlength\custom-bs-maxlength.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-multiselect\bootstrap-multiselect.min.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-range-Slider\bootstrap-rangeSlider.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-range-Slider\bootstrap-slider.css" />
+    <Content Include="ContentLTR\plugins\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="ContentLTR\plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-touchspin\custom-bootstrap-touchspin.js" />
+    <Content Include="ContentLTR\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="ContentLTR\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="ContentLTR\plugins\countdown\jquery.countdown.min.js" />
+    <Content Include="ContentLTR\plugins\counter\jquery.countTo.js" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\crossvent.js" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\crossvent.min.js" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\custom-dragula.js" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\dragula.css" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\dragula.js" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\dragula.min.js" />
+    <Content Include="ContentLTR\plugins\drag-and-drop\dragula\example.css" />
+    <Content Include="ContentLTR\plugins\dropify\dropify.min.css" />
+    <Content Include="ContentLTR\plugins\dropify\dropify.min.js" />
+    <Content Include="ContentLTR\plugins\dropify\fonts\dropify.svg" />
+    <Content Include="ContentLTR\plugins\editors\markdown\custom-markdown.js" />
+    <Content Include="ContentLTR\plugins\editors\markdown\simplemde.min.css" />
+    <Content Include="ContentLTR\plugins\editors\markdown\simplemde.min.js" />
+    <Content Include="ContentLTR\plugins\editors\quill\custom-quill.js" />
+    <Content Include="ContentLTR\plugins\editors\quill\quill.bubble.css" />
+    <Content Include="ContentLTR\plugins\editors\quill\quill.js" />
+    <Content Include="ContentLTR\plugins\editors\quill\quill.snow.css" />
+    <Content Include="ContentLTR\plugins\file-upload\file-upload-with-preview.min.css" />
+    <Content Include="ContentLTR\plugins\file-upload\file-upload-with-preview.min.js" />
+    <Content Include="ContentLTR\plugins\flatpickr\custom-flatpickr.css" />
+    <Content Include="ContentLTR\plugins\flatpickr\custom-flatpickr.js" />
+    <Content Include="ContentLTR\plugins\flatpickr\flatpickr.css" />
+    <Content Include="ContentLTR\plugins\flatpickr\flatpickr.js" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\activity.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\airplay.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\alert-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\alert-octagon.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\alert-triangle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\align-center.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\align-justify.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\align-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\align-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\anchor.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\aperture.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\archive.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-down-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-down-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-down-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-left-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-right-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-up-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-up-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-up-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\arrow-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\at-sign.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\award.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bar-chart-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bar-chart.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\battery-charging.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\battery.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bell-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bell.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bluetooth.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bold.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\book-open.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\book.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\bookmark.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\box.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\briefcase.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\calendar.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\camera-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\camera.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cast.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\check-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\check-square.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\check.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevron-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevron-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevron-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevron-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevrons-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevrons-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevrons-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chevrons-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\chrome.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\clipboard.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\clock.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cloud-drizzle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cloud-lightning.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cloud-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cloud-rain.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cloud-snow.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cloud.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\code.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\codepen.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\codesandbox.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\coffee.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\columns.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\command.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\compass.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\copy.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-down-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-down-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-left-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-left-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-right-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-right-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-up-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\corner-up-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\cpu.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\credit-card.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\crop.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\crosshair.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\database.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\delete.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\disc.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\dollar-sign.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\download-cloud.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\download.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\droplet.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\edit-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\edit-3.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\edit.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\external-link.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\eye-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\eye.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\facebook.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\fast-forward.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\feather.min.js" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\feather.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\figma.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\file-minus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\file-plus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\file-text.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\file.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\film.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\filter.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\flag.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\folder-minus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\folder-plus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\folder.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\framer.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\frown.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\gift.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\git-branch.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\git-commit.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\git-merge.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\git-pull-request.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\github.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\gitlab.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\globe.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\grid.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\hard-drive.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\hash.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\headphones.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\heart.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\help-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\hexagon.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\home.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\image.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\inbox.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\info.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\instagram.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\italic.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\key.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\layers.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\layout.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\life-buoy.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\link-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\link.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\linkedin.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\list.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\loader.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\lock.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\log-in.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\log-out.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\mail.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\map-pin.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\map.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\maximize-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\maximize.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\meh.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\menu.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\message-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\message-square.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\mic-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\mic.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\minimize-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\minimize.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\minus-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\minus-square.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\minus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\monitor.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\moon.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\more-horizontal.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\more-vertical.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\mouse-pointer.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\move.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\music.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\navigation-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\navigation.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\octagon.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\package.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\paperclip.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\pause-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\pause.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\pen-tool.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\percent.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone-call.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone-forwarded.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone-incoming.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone-missed.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone-outgoing.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\phone.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\pie-chart.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\play-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\play.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\plus-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\plus-square.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\plus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\pocket.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\power.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\printer.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\radio.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\refresh-ccw.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\refresh-cw.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\repeat.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\rewind.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\rotate-ccw.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\rotate-cw.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\rss.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\save.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\scissors.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\search.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\send.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\server.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\settings.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\share-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\share.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\shield-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\shield.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\shopping-bag.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\shopping-cart.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\shuffle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\sidebar.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\skip-back.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\skip-forward.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\slack.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\slash.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\sliders.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\smartphone.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\smile.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\speaker.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\square.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\star.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\stop-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\sun.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\sunrise.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\sunset.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\tablet.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\tag.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\target.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\terminal.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\thermometer.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\thumbs-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\thumbs-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\toggle-left.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\toggle-right.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\tool.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\trash-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\trash.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\trello.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\trending-down.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\trending-up.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\triangle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\truck.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\tv.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\twitch.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\twitter.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\type.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\umbrella.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\underline.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\unlock.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\upload-cloud.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\upload.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\user-check.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\user-minus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\user-plus.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\user-x.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\user.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\users.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\video-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\video.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\voicemail.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\volume-1.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\volume-2.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\volume-x.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\volume.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\watch.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\wifi-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\wifi.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\wind.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\x-circle.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\x-octagon.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\x-square.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\x.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\youtube.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\zap-off.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\zap.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\zoom-in.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\feather\zoom-out.svg" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\css\fontawesome.css" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\css\regular.css" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="ContentLTR\plugins\fullcalendar\custom-fullcalendar.advance.css" />
+    <Content Include="ContentLTR\plugins\fullcalendar\custom-fullcalendar.advance.js" />
+    <Content Include="ContentLTR\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="ContentLTR\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="ContentLTR\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="ContentLTR\plugins\fullcalendar\moment.min.js" />
+    <Content Include="ContentLTR\plugins\highlight\highlight.pack.js" />
+    <Content Include="ContentLTR\plugins\highlight\styles\a11y-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\a11y-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\agate.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\an-old-hope.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\androidstudio.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\arduino-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\arta.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\ascetic.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-cave-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-cave-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-dune-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-dune-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-estuary-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-estuary-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-forest-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-forest-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-heath-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-heath-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-lakeside-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-lakeside-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-plateau-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-plateau-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-savanna-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-savanna-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-seaside-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-seaside-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-sulphurpool-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atelier-sulphurpool-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atom-one-dark-reasonable.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atom-one-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\atom-one-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\brown-paper.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\brown-papersq.png" />
+    <Content Include="ContentLTR\plugins\highlight\styles\codepen-embed.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\color-brewer.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\darcula.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\darkula.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\default.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\docco.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\dracula.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\far.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\foundation.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\github-gist.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\github.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\gml.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\googlecode.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\grayscale.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\gruvbox-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\gruvbox-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\hopscotch.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\hybrid.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\idea.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\ir-black.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\isbl-editor-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\isbl-editor-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\kimbie.dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\kimbie.light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\lightfair.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\magula.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\mono-blue.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\monokai-sublime.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\monokai.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\nord.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\obsidian.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\ocean.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\paraiso-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\paraiso-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\pojoaque.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\pojoaque.jpg" />
+    <Content Include="ContentLTR\plugins\highlight\styles\purebasic.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\qtcreator_dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\qtcreator_light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\railscasts.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\rainbow.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\routeros.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\school-book.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\school-book.png" />
+    <Content Include="ContentLTR\plugins\highlight\styles\shades-of-purple.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\solarized-dark.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\solarized-light.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\sunburst.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\tomorrow-night-blue.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\tomorrow-night-bright.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\tomorrow-night-eighties.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\tomorrow-night.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\tomorrow.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\vs.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\vs2015.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\xcode.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\xt256.css" />
+    <Content Include="ContentLTR\plugins\highlight\styles\zenburn.css" />
+    <Content Include="ContentLTR\plugins\input-mask\input-mask.js" />
+    <Content Include="ContentLTR\plugins\input-mask\jquery.inputmask.bundle.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-be.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-ca.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-hu.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-it.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-mx.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-nl.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone-ru.min.js" />
+    <Content Include="ContentLTR\plugins\input-mask\phone-codes\phone.min.js" />
+    <Content Include="ContentLTR\plugins\jquery-step\custom-jquery.steps.js" />
+    <Content Include="ContentLTR\plugins\jquery-step\jquery.steps.css" />
+    <Content Include="ContentLTR\plugins\jquery-step\jquery.steps.min.js" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="ContentLTR\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="ContentLTR\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="ContentLTR\plugins\jvector\africa\jquery-jvectormap-africa-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\asia\jquery-jvectormap-asia-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\continents\jquery-jvectormap-continents-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\europe\jquery-jvectormap-europe-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\jquery-jvectormap-2.0.3.css" />
+    <Content Include="ContentLTR\plugins\jvector\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="ContentLTR\plugins\jvector\jvector_script.js" />
+    <Content Include="ContentLTR\plugins\jvector\north_america\jquery-jvectormap-north-america-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\oceania\jquery-jvectormap-oceanina-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\south-america\jquery-jvectormap-south-america-en.js" />
+    <Content Include="ContentLTR\plugins\jvector\worldmap_script\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="ContentLTR\plugins\lightbox\custom-photswipe.css" />
+    <Content Include="ContentLTR\plugins\lightbox\custom-photswipe.js" />
+    <Content Include="ContentLTR\plugins\lightbox\default-skin\default-skin.css" />
+    <Content Include="ContentLTR\plugins\lightbox\default-skin\default-skin.png" />
+    <Content Include="ContentLTR\plugins\lightbox\default-skin\default-skin.svg" />
+    <Content Include="ContentLTR\plugins\lightbox\default-skin\preloader.gif" />
+    <Content Include="ContentLTR\plugins\lightbox\photoswipe-ui-default.js" />
+    <Content Include="ContentLTR\plugins\lightbox\photoswipe-ui-default.min.js" />
+    <Content Include="ContentLTR\plugins\lightbox\photoswipe.css" />
+    <Content Include="ContentLTR\plugins\lightbox\photoswipe.js" />
+    <Content Include="ContentLTR\plugins\lightbox\photoswipe.min.js" />
+    <Content Include="ContentLTR\plugins\loaders\custom-loader.css" />
+    <Content Include="ContentLTR\plugins\notification\snackbar\snackbar.min.css" />
+    <Content Include="ContentLTR\plugins\notification\snackbar\snackbar.min.js" />
+    <Content Include="ContentLTR\plugins\noUiSlider\custom-nouiSlider.css" />
+    <Content Include="ContentLTR\plugins\noUiSlider\custom-nouiSlider.js" />
+    <Content Include="ContentLTR\plugins\noUiSlider\nouislider.min.css" />
+    <Content Include="ContentLTR\plugins\noUiSlider\nouislider.min.js" />
+    <Content Include="ContentLTR\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="ContentLTR\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="ContentLTR\plugins\pricing-table\css\component.css" />
+    <Content Include="ContentLTR\plugins\select2\custom-select2.js" />
+    <Content Include="ContentLTR\plugins\select2\select2-spinner.gif" />
+    <Content Include="ContentLTR\plugins\select2\select2.min.css" />
+    <Content Include="ContentLTR\plugins\select2\select2.min.js" />
+    <Content Include="ContentLTR\plugins\select2\select2.png" />
+    <Content Include="ContentLTR\plugins\select2\select2x2.png" />
+    <Content Include="ContentLTR\plugins\sweetalerts\custom-sweetalert.js" />
+    <Content Include="ContentLTR\plugins\sweetalerts\promise-polyfill.js" />
+    <Content Include="ContentLTR\plugins\sweetalerts\sweetalert.css" />
+    <Content Include="ContentLTR\plugins\sweetalerts\sweetalert.js" />
+    <Content Include="ContentLTR\plugins\sweetalerts\sweetalert2.min.css" />
+    <Content Include="ContentLTR\plugins\sweetalerts\sweetalert2.min.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\button-ext\buttons.html5.min.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\button-ext\buttons.print.min.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\button-ext\dataTables.buttons.min.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\button-ext\jszip.min.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\custom_dt_custom.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\custom_dt_html5.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\custom_dt_miscellaneous.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\custom_dt_multiple_tables.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\custom_miscellaneous.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\datatables-dark.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\datatables.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\datatables.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\dt-custom-setting.js" />
+    <Content Include="ContentLTR\plugins\table\datatable\dt-global_style-dark.css" />
+    <Content Include="ContentLTR\plugins\table\datatable\dt-global_style.css" />
+    <Content Include="ContentLTR\plugins\tagInput\tags-input.css" />
+    <Content Include="ContentLTR\plugins\tagInput\tags-input.js" />
+    <Content Include="ContentLTR\plugins\treeview\custom-jstree.js" />
+    <Content Include="ContentRTL\assets\css\apps\contacts.css" />
+    <Content Include="ContentRTL\assets\css\apps\invoice.css" />
+    <Content Include="ContentRTL\assets\css\apps\mailbox.css" />
+    <Content Include="ContentRTL\assets\css\apps\mailing-chat.css" />
+    <Content Include="ContentRTL\assets\css\apps\notes.css" />
+    <Content Include="ContentRTL\assets\css\apps\scrumboard.css" />
+    <Content Include="ContentRTL\assets\css\apps\todolist.css" />
+    <Content Include="ContentRTL\assets\css\authentication\form-1.css" />
+    <Content Include="ContentRTL\assets\css\authentication\form-2.css" />
+    <Content Include="ContentRTL\assets\css\chosen.css" />
+    <Content Include="ContentRTL\assets\css\components\cards\card.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-carousel.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-countdown.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-counter.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-list-group.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-media_object.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-modal.css" />
+    <Content Include="ContentRTL\assets\css\components\custom-sweetalert.css" />
+    <Content Include="ContentRTL\assets\css\components\tabs-accordian\custom-accordions.css" />
+    <Content Include="ContentRTL\assets\css\components\tabs-accordian\custom-tabs.css" />
+    <Content Include="ContentRTL\assets\css\components\timeline\custom-timeline.css" />
+    <Content Include="ContentRTL\assets\css\dashboard\dash_1.css" />
+    <Content Include="ContentRTL\assets\css\dashboard\dash_2.css" />
+    <Content Include="ContentRTL\assets\css\elements\alert.css" />
+    <Content Include="ContentRTL\assets\css\elements\avatar.css" />
+    <Content Include="ContentRTL\assets\css\elements\breadcrumb.css" />
+    <Content Include="ContentRTL\assets\css\elements\color_library.css" />
+    <Content Include="ContentRTL\assets\css\elements\custom-pagination.css" />
+    <Content Include="ContentRTL\assets\css\elements\custom-tree_view.css" />
+    <Content Include="ContentRTL\assets\css\elements\custom-typography.css" />
+    <Content Include="ContentRTL\assets\css\elements\infobox.css" />
+    <Content Include="ContentRTL\assets\css\elements\miscellaneous.css" />
+    <Content Include="ContentRTL\assets\css\elements\popover.css" />
+    <Content Include="ContentRTL\assets\css\elements\search.css" />
+    <Content Include="ContentRTL\assets\css\elements\tooltip.css" />
+    <Content Include="ContentRTL\assets\css\forms\bootstrap-form.css" />
+    <Content Include="ContentRTL\assets\css\forms\custom-clipboard.css" />
+    <Content Include="ContentRTL\assets\css\forms\switches.css" />
+    <Content Include="ContentRTL\assets\css\forms\theme-checkbox-radio.css" />
+    <Content Include="ContentRTL\assets\css\loader.css" />
+    <Content Include="ContentRTL\assets\css\main.css" />
+    <Content Include="ContentRTL\assets\css\pages\coming-soon\style.css" />
+    <Content Include="ContentRTL\assets\css\pages\contact_us.css" />
+    <Content Include="ContentRTL\assets\css\pages\error\style-400.css" />
+    <Content Include="ContentRTL\assets\css\pages\error\style-500.css" />
+    <Content Include="ContentRTL\assets\css\pages\error\style-503.css" />
+    <Content Include="ContentRTL\assets\css\pages\error\style-maintanence.css" />
+    <Content Include="ContentRTL\assets\css\pages\faq\faq.css" />
+    <Content Include="ContentRTL\assets\css\pages\faq\faq2.css" />
+    <Content Include="ContentRTL\assets\css\pages\helpdesk.css" />
+    <Content Include="ContentRTL\assets\css\pages\privacy\privacy.css" />
+    <Content Include="ContentRTL\assets\css\plugins.css" />
+    <Content Include="ContentRTL\assets\css\scrollspyNav.css" />
+    <Content Include="ContentRTL\assets\css\structure.css" />
+    <Content Include="ContentRTL\assets\css\tables\table-basic.css" />
+    <Content Include="ContentRTL\assets\css\users\account-setting.css" />
+    <Content Include="ContentRTL\assets\css\users\user-profile.css" />
+    <Content Include="ContentRTL\assets\css\widgets\modules-widgets.css" />
+    <Content Include="ContentRTL\assets\img\120x120.jpg" />
+    <Content Include="ContentRTL\assets\img\1280x857.jpg" />
+    <Content Include="ContentRTL\assets\img\175x115.jpg" />
+    <Content Include="ContentRTL\assets\img\200x200.jpg" />
+    <Content Include="ContentRTL\assets\img\300x300.jpg" />
+    <Content Include="ContentRTL\assets\img\350x250.jpg" />
+    <Content Include="ContentRTL\assets\img\400x168.jpg" />
+    <Content Include="ContentRTL\assets\img\400x300.jpg" />
+    <Content Include="ContentRTL\assets\img\509x343.jpg" />
+    <Content Include="ContentRTL\assets\img\600x300.jpg" />
+    <Content Include="ContentRTL\assets\img\640x426.jpg" />
+    <Content Include="ContentRTL\assets\img\90x90.jpg" />
+    <Content Include="ContentRTL\assets\img\ab-1.jpeg" />
+    <Content Include="ContentRTL\assets\img\arrow-down.png" />
+    <Content Include="ContentRTL\assets\img\bg.png" />
+    <Content Include="ContentRTL\assets\img\ca.png" />
+    <Content Include="ContentRTL\assets\img\contact-us-map-pin.svg" />
+    <Content Include="ContentRTL\assets\img\de.png" />
+    <Content Include="ContentRTL\assets\img\faq.svg" />
+    <Content Include="ContentRTL\assets\img\favicon.ico" />
+    <Content Include="ContentRTL\assets\img\fr.png" />
+    <Content Include="ContentRTL\assets\img\jp.png" />
+    <Content Include="ContentRTL\assets\img\mindset.svg" />
+    <Content Include="ContentRTL\assets\js\app.js" />
+    <Content Include="ContentRTL\assets\js\apps\contact.js" />
+    <Content Include="ContentRTL\assets\js\apps\custom-mailbox.js" />
+    <Content Include="ContentRTL\assets\js\apps\invoice.js" />
+    <Content Include="ContentRTL\assets\js\apps\mailbox-chat.js" />
+    <Content Include="ContentRTL\assets\js\apps\notes.js" />
+    <Content Include="ContentRTL\assets\js\apps\scrumboard.js" />
+    <Content Include="ContentRTL\assets\js\apps\todoList.js" />
+    <Content Include="ContentRTL\assets\js\authentication\form-1.js" />
+    <Content Include="ContentRTL\assets\js\authentication\form-2.js" />
+    <Content Include="ContentRTL\assets\js\chosen.jquery.js" />
+    <Content Include="ContentRTL\assets\js\chosen.jquery.min.js" />
+    <Content Include="ContentRTL\assets\js\chosen.proto.js" />
+    <Content Include="ContentRTL\assets\js\chosen.proto.min.js" />
+    <Content Include="ContentRTL\assets\js\clipboard\clipboard.min.js" />
+    <Content Include="ContentRTL\assets\js\components\custom-carousel.js" />
+    <Content Include="ContentRTL\assets\js\components\custom-countdown.js" />
+    <Content Include="ContentRTL\assets\js\components\custom-counter.js" />
+    <Content Include="ContentRTL\assets\js\components\notification\custom-snackbar.js" />
+    <Content Include="ContentRTL\assets\js\components\session-timeout\bootstrap-session-timeout.js" />
+    <Content Include="ContentRTL\assets\js\components\session-timeout\custom-bootstrap_session_timeout.js" />
+    <Content Include="ContentRTL\assets\js\components\ui-accordions.js" />
+    <Content Include="ContentRTL\assets\js\custom.js" />
+    <Content Include="ContentRTL\assets\js\dashboard\dash_1.js" />
+    <Content Include="ContentRTL\assets\js\dashboard\dash_2.js" />
+    <Content Include="ContentRTL\assets\js\elements\custom-search.js" />
+    <Content Include="ContentRTL\assets\js\elements\popovers.js" />
+    <Content Include="ContentRTL\assets\js\elements\tooltip.js" />
+    <Content Include="ContentRTL\assets\js\forms\bootstrap_validation\bs_validation_script.js" />
+    <Content Include="ContentRTL\assets\js\forms\custom-clipboard.js" />
+    <Content Include="ContentRTL\assets\js\ie11fix\fn.fix-padStart.js" />
+    <Content Include="ContentRTL\assets\js\libs\jquery-3.1.1.min.js" />
+    <Content Include="ContentRTL\assets\js\libs\jquery-ui.js" />
+    <Content Include="ContentRTL\assets\js\loader.js" />
+    <Content Include="ContentRTL\assets\js\pages\coming-soon\coming-soon.js" />
+    <Content Include="ContentRTL\assets\js\pages\faq\faq.js" />
+    <Content Include="ContentRTL\assets\js\pages\faq\faq2.js" />
+    <Content Include="ContentRTL\assets\js\pages\helpdesk.js" />
+    <Content Include="ContentRTL\assets\js\scrollspyNav.js" />
+    <Content Include="ContentRTL\assets\js\users\account-settings.js" />
+    <Content Include="ContentRTL\assets\js\widgets\modules-widgets.js" />
+    <Content Include="ContentRTL\bootstrap\css\bootstrap.css" />
+    <Content Include="ContentRTL\bootstrap\css\bootstrap.min.css" />
+    <Content Include="ContentRTL\bootstrap\js\bootstrap.js" />
+    <Content Include="ContentRTL\bootstrap\js\bootstrap.min.js" />
+    <Content Include="ContentRTL\bootstrap\js\popper.min.js" />
+    <Content Include="ContentRTL\Custom\CustomStyleSheet.css" />
+    <Content Include="ContentRTL\plugins\animate\animate.css" />
+    <Content Include="ContentRTL\plugins\apex\apexcharts.css" />
+    <Content Include="ContentRTL\plugins\apex\apexcharts.min.js" />
+    <Content Include="ContentRTL\plugins\apex\custom-apexcharts.js" />
+    <Content Include="ContentRTL\plugins\autocomplete\autocomplete.css" />
+    <Content Include="ContentRTL\plugins\autocomplete\countries.js" />
+    <Content Include="ContentRTL\plugins\autocomplete\demo.js" />
+    <Content Include="ContentRTL\plugins\autocomplete\jquery.autocomplete.js" />
+    <Content Include="ContentRTL\plugins\autocomplete\jquery.mockjax.js" />
+    <Content Include="ContentRTL\plugins\blockui\custom-blockui.js" />
+    <Content Include="ContentRTL\plugins\blockui\jquery.blockUI.min.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-maxlength\bootstrap-maxlength.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-maxlength\custom-bs-maxlength.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-multiselect\bootstrap-multiselect.min.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-range-Slider\bootstrap-rangeSlider.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-range-Slider\bootstrap-slider.css" />
+    <Content Include="ContentRTL\plugins\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="ContentRTL\plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-touchspin\custom-bootstrap-touchspin.js" />
+    <Content Include="ContentRTL\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="ContentRTL\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="ContentRTL\plugins\countdown\jquery.countdown.min.js" />
+    <Content Include="ContentRTL\plugins\counter\jquery.countTo.js" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\crossvent.js" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\crossvent.min.js" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\custom-dragula.js" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\dragula.css" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\dragula.js" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\dragula.min.js" />
+    <Content Include="ContentRTL\plugins\drag-and-drop\dragula\example.css" />
+    <Content Include="ContentRTL\plugins\dropify\dropify.min.css" />
+    <Content Include="ContentRTL\plugins\dropify\dropify.min.js" />
+    <Content Include="ContentRTL\plugins\dropify\fonts\dropify.svg" />
+    <Content Include="ContentRTL\plugins\editors\markdown\custom-markdown.js" />
+    <Content Include="ContentRTL\plugins\editors\markdown\simplemde.min.css" />
+    <Content Include="ContentRTL\plugins\editors\markdown\simplemde.min.js" />
+    <Content Include="ContentRTL\plugins\editors\quill\custom-quill.js" />
+    <Content Include="ContentRTL\plugins\editors\quill\quill.bubble.css" />
+    <Content Include="ContentRTL\plugins\editors\quill\quill.js" />
+    <Content Include="ContentRTL\plugins\editors\quill\quill.snow.css" />
+    <Content Include="ContentRTL\plugins\file-upload\file-upload-with-preview.min.css" />
+    <Content Include="ContentRTL\plugins\file-upload\file-upload-with-preview.min.js" />
+    <Content Include="ContentRTL\plugins\flatpickr\custom-flatpickr.css" />
+    <Content Include="ContentRTL\plugins\flatpickr\custom-flatpickr.js" />
+    <Content Include="ContentRTL\plugins\flatpickr\flatpickr.css" />
+    <Content Include="ContentRTL\plugins\flatpickr\flatpickr.js" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\activity.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\airplay.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\alert-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\alert-octagon.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\alert-triangle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\align-center.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\align-justify.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\align-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\align-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\anchor.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\aperture.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\archive.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-down-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-down-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-down-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-left-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-right-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-up-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-up-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-up-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\arrow-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\at-sign.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\award.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bar-chart-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bar-chart.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\battery-charging.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\battery.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bell-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bell.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bluetooth.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bold.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\book-open.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\book.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\bookmark.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\box.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\briefcase.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\calendar.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\camera-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\camera.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cast.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\check-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\check-square.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\check.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevron-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevron-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevron-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevron-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevrons-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevrons-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevrons-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chevrons-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\chrome.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\clipboard.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\clock.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cloud-drizzle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cloud-lightning.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cloud-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cloud-rain.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cloud-snow.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cloud.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\code.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\codepen.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\codesandbox.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\coffee.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\columns.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\command.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\compass.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\copy.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-down-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-down-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-left-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-left-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-right-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-right-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-up-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\corner-up-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\cpu.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\credit-card.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\crop.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\crosshair.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\database.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\delete.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\disc.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\dollar-sign.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\download-cloud.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\download.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\droplet.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\edit-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\edit-3.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\edit.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\external-link.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\eye-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\eye.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\facebook.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\fast-forward.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\feather.min.js" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\feather.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\figma.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\file-minus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\file-plus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\file-text.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\file.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\film.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\filter.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\flag.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\folder-minus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\folder-plus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\folder.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\framer.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\frown.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\gift.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\git-branch.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\git-commit.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\git-merge.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\git-pull-request.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\github.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\gitlab.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\globe.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\grid.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\hard-drive.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\hash.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\headphones.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\heart.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\help-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\hexagon.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\home.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\image.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\inbox.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\info.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\instagram.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\italic.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\key.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\layers.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\layout.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\life-buoy.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\link-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\link.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\linkedin.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\list.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\loader.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\lock.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\log-in.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\log-out.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\mail.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\map-pin.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\map.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\maximize-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\maximize.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\meh.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\menu.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\message-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\message-square.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\mic-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\mic.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\minimize-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\minimize.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\minus-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\minus-square.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\minus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\monitor.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\moon.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\more-horizontal.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\more-vertical.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\mouse-pointer.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\move.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\music.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\navigation-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\navigation.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\octagon.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\package.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\paperclip.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\pause-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\pause.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\pen-tool.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\percent.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone-call.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone-forwarded.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone-incoming.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone-missed.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone-outgoing.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\phone.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\pie-chart.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\play-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\play.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\plus-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\plus-square.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\plus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\pocket.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\power.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\printer.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\radio.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\refresh-ccw.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\refresh-cw.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\repeat.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\rewind.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\rotate-ccw.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\rotate-cw.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\rss.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\save.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\scissors.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\search.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\send.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\server.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\settings.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\share-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\share.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\shield-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\shield.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\shopping-bag.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\shopping-cart.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\shuffle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\sidebar.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\skip-back.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\skip-forward.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\slack.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\slash.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\sliders.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\smartphone.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\smile.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\speaker.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\square.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\star.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\stop-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\sun.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\sunrise.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\sunset.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\tablet.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\tag.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\target.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\terminal.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\thermometer.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\thumbs-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\thumbs-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\toggle-left.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\toggle-right.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\tool.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\trash-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\trash.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\trello.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\trending-down.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\trending-up.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\triangle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\truck.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\tv.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\twitch.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\twitter.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\type.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\umbrella.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\underline.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\unlock.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\upload-cloud.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\upload.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\user-check.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\user-minus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\user-plus.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\user-x.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\user.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\users.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\video-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\video.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\voicemail.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\volume-1.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\volume-2.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\volume-x.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\volume.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\watch.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\wifi-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\wifi.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\wind.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\x-circle.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\x-octagon.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\x-square.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\x.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\youtube.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\zap-off.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\zap.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\zoom-in.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\feather\zoom-out.svg" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\css\fontawesome.css" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\css\regular.css" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="ContentRTL\plugins\fullcalendar\custom-fullcalendar.advance.css" />
+    <Content Include="ContentRTL\plugins\fullcalendar\custom-fullcalendar.advance.js" />
+    <Content Include="ContentRTL\plugins\fullcalendar\flatpickr.js" />
+    <Content Include="ContentRTL\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="ContentRTL\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="ContentRTL\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="ContentRTL\plugins\fullcalendar\moment.min.js" />
+    <Content Include="ContentRTL\plugins\highlight\highlight.pack.js" />
+    <Content Include="ContentRTL\plugins\highlight\styles\a11y-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\a11y-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\agate.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\an-old-hope.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\androidstudio.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\arduino-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\arta.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\ascetic.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-cave-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-cave-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-dune-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-dune-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-estuary-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-estuary-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-forest-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-forest-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-heath-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-heath-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-lakeside-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-lakeside-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-plateau-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-plateau-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-savanna-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-savanna-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-seaside-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-seaside-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-sulphurpool-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atelier-sulphurpool-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atom-one-dark-reasonable.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atom-one-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\atom-one-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\brown-paper.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\brown-papersq.png" />
+    <Content Include="ContentRTL\plugins\highlight\styles\codepen-embed.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\color-brewer.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\darcula.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\darkula.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\default.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\docco.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\dracula.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\far.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\foundation.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\github-gist.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\github.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\gml.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\googlecode.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\grayscale.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\gruvbox-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\gruvbox-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\hopscotch.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\hybrid.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\idea.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\ir-black.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\isbl-editor-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\isbl-editor-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\kimbie.dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\kimbie.light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\lightfair.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\magula.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\mono-blue.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\monokai-sublime.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\monokai.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\nord.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\obsidian.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\ocean.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\paraiso-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\paraiso-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\pojoaque.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\pojoaque.jpg" />
+    <Content Include="ContentRTL\plugins\highlight\styles\purebasic.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\qtcreator_dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\qtcreator_light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\railscasts.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\rainbow.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\routeros.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\school-book.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\school-book.png" />
+    <Content Include="ContentRTL\plugins\highlight\styles\shades-of-purple.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\solarized-dark.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\solarized-light.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\sunburst.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\tomorrow-night-blue.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\tomorrow-night-bright.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\tomorrow-night-eighties.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\tomorrow-night.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\tomorrow.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\vs.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\vs2015.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\xcode.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\xt256.css" />
+    <Content Include="ContentRTL\plugins\highlight\styles\zenburn.css" />
+    <Content Include="ContentRTL\plugins\input-mask\input-mask.js" />
+    <Content Include="ContentRTL\plugins\input-mask\jquery.inputmask.bundle.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-be.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-ca.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-hu.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-it.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-mx.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-nl.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone-ru.min.js" />
+    <Content Include="ContentRTL\plugins\input-mask\phone-codes\phone.min.js" />
+    <Content Include="ContentRTL\plugins\jquery-step\custom-jquery.steps.js" />
+    <Content Include="ContentRTL\plugins\jquery-step\jquery.steps.css" />
+    <Content Include="ContentRTL\plugins\jquery-step\jquery.steps.min.js" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="ContentRTL\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="ContentRTL\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="ContentRTL\plugins\jvector\africa\jquery-jvectormap-africa-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\asia\jquery-jvectormap-asia-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\continents\jquery-jvectormap-continents-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\europe\jquery-jvectormap-europe-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\jquery-jvectormap-2.0.3.css" />
+    <Content Include="ContentRTL\plugins\jvector\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="ContentRTL\plugins\jvector\jvector_script.js" />
+    <Content Include="ContentRTL\plugins\jvector\north_america\jquery-jvectormap-north-america-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\oceania\jquery-jvectormap-oceanina-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\south-america\jquery-jvectormap-south-america-en.js" />
+    <Content Include="ContentRTL\plugins\jvector\worldmap_script\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="ContentRTL\plugins\lightbox\custom-photswipe.css" />
+    <Content Include="ContentRTL\plugins\lightbox\custom-photswipe.js" />
+    <Content Include="ContentRTL\plugins\lightbox\default-skin\default-skin.css" />
+    <Content Include="ContentRTL\plugins\lightbox\default-skin\default-skin.png" />
+    <Content Include="ContentRTL\plugins\lightbox\default-skin\default-skin.svg" />
+    <Content Include="ContentRTL\plugins\lightbox\default-skin\preloader.gif" />
+    <Content Include="ContentRTL\plugins\lightbox\photoswipe-ui-default.js" />
+    <Content Include="ContentRTL\plugins\lightbox\photoswipe-ui-default.min.js" />
+    <Content Include="ContentRTL\plugins\lightbox\photoswipe.css" />
+    <Content Include="ContentRTL\plugins\lightbox\photoswipe.js" />
+    <Content Include="ContentRTL\plugins\lightbox\photoswipe.min.js" />
+    <Content Include="ContentRTL\plugins\loaders\custom-loader.css" />
+    <Content Include="ContentRTL\plugins\notification\snackbar\snackbar.min.css" />
+    <Content Include="ContentRTL\plugins\notification\snackbar\snackbar.min.js" />
+    <Content Include="ContentRTL\plugins\noUiSlider\custom-nouiSlider.css" />
+    <Content Include="ContentRTL\plugins\noUiSlider\custom-nouiSlider.js" />
+    <Content Include="ContentRTL\plugins\noUiSlider\nouislider.min.css" />
+    <Content Include="ContentRTL\plugins\noUiSlider\nouislider.min.js" />
+    <Content Include="ContentRTL\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="ContentRTL\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="ContentRTL\plugins\pricing-table\css\component.css" />
+    <Content Include="ContentRTL\plugins\select2\custom-select2.js" />
+    <Content Include="ContentRTL\plugins\select2\select2-spinner.gif" />
+    <Content Include="ContentRTL\plugins\select2\select2.min.css" />
+    <Content Include="ContentRTL\plugins\select2\select2.min.js" />
+    <Content Include="ContentRTL\plugins\select2\select2.png" />
+    <Content Include="ContentRTL\plugins\select2\select2x2.png" />
+    <Content Include="ContentRTL\plugins\sweetalerts\custom-sweetalert.js" />
+    <Content Include="ContentRTL\plugins\sweetalerts\promise-polyfill.js" />
+    <Content Include="ContentRTL\plugins\sweetalerts\sweetalert.css" />
+    <Content Include="ContentRTL\plugins\sweetalerts\sweetalert.js" />
+    <Content Include="ContentRTL\plugins\sweetalerts\sweetalert2.min.css" />
+    <Content Include="ContentRTL\plugins\sweetalerts\sweetalert2.min.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\button-ext\buttons.html5.min.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\button-ext\buttons.print.min.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\button-ext\dataTables.buttons.min.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\button-ext\jszip.min.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\custom_dt_custom.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\custom_dt_html5.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\custom_dt_miscellaneous.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\custom_dt_multiple_tables.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\custom_miscellaneous.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\datatables-dark.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\datatables.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\datatables.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\dt-custom-setting.js" />
+    <Content Include="ContentRTL\plugins\table\datatable\dt-global_style-dark.css" />
+    <Content Include="ContentRTL\plugins\table\datatable\dt-global_style.css" />
+    <Content Include="ContentRTL\plugins\tagInput\tags-input.css" />
+    <Content Include="ContentRTL\plugins\tagInput\tags-input.js" />
+    <Content Include="ContentRTL\plugins\treeview\custom-jstree.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DBModelBrandWatch.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DBModelBrandWatch.Context.cs</LastGenOutput>
+      <DependentUpon>DBModelBrandWatch.edmx</DependentUpon>
+      <CustomToolNamespace>BrandWatchElaqat.Models</CustomToolNamespace>
+    </Content>
+    <Content Include="DBModelBrandWatch.edmx.sql" />
+    <Content Include="DBModelBrandWatch.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DBModelBrandWatch.cs</LastGenOutput>
+      <DependentUpon>DBModelBrandWatch.edmx</DependentUpon>
+      <CustomToolNamespace>BrandWatchElaqat.Models</CustomToolNamespace>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Image\AIMeta.jpg" />
+    <Content Include="Image\BolyWood.jpg" />
+    <Content Include="Image\ca.png" />
+    <Content Include="Image\de.png" />
+    <Content Include="Image\DivingMan.jpg" />
+    <Content Include="Image\EgyptWins.png" />
+    <Content Include="Image\elaqat_logo.png" />
+    <Content Include="Image\fr.png" />
+    <Content Include="Image\jp.png" />
+    <Content Include="Image\MacWinter.jpg" />
+    <Content Include="Image\SaudiFlag.png" />
+    <Content Include="Image\School.jpg" />
+    <Content Include="Image\UKFlag.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="DBModelBrandWatch.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBModelBrandWatch.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>BrandWatchElaqat.Models</CustomToolNamespace>
+    </EntityDeploy>
+    <Content Include="DBModelBrandWatch.edmx.diagram">
+      <DependentUpon>DBModelBrandWatch.edmx</DependentUpon>
+      <CustomToolNamespace>BrandWatchElaqat.Models</CustomToolNamespace>
+    </Content>
+    <Content Include="ContentLTR\plugins\dropify\fonts\dropify.eot" />
+    <Content Include="ContentLTR\plugins\dropify\fonts\dropify.ttf" />
+    <Content Include="ContentLTR\plugins\dropify\fonts\dropify.woff" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="ContentLTR\plugins\font-icons\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="ContentLTR\sass\assets\apps\contacts.scss" />
+    <Content Include="ContentLTR\sass\assets\apps\invoice.scss" />
+    <Content Include="ContentLTR\sass\assets\apps\mailbox.scss" />
+    <Content Include="ContentLTR\sass\assets\apps\mailing-chat.scss" />
+    <Content Include="ContentLTR\sass\assets\apps\notes.scss" />
+    <Content Include="ContentLTR\sass\assets\apps\scrumboard.scss" />
+    <Content Include="ContentLTR\sass\assets\apps\todolist.scss" />
+    <Content Include="ContentLTR\sass\assets\authentication\form-1.scss" />
+    <Content Include="ContentLTR\sass\assets\authentication\form-2.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\card.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-1.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-2.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-3.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-4.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-5.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-6.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-7.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-8.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_card-9.scss" />
+    <Content Include="ContentLTR\sass\assets\components\cards\_card\_media-query.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-carousel.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-countdown.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-counter.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-list-group.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-media_object.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-modal.scss" />
+    <Content Include="ContentLTR\sass\assets\components\custom-sweetalert.scss" />
+    <Content Include="ContentLTR\sass\assets\components\tabs-accordian\custom-accordions.scss" />
+    <Content Include="ContentLTR\sass\assets\components\tabs-accordian\custom-tabs.scss" />
+    <Content Include="ContentLTR\sass\assets\components\timeline\custom-timeline.scss" />
+    <Content Include="ContentLTR\sass\assets\components\timeline\_timeline\_timeline-alter.scss" />
+    <Content Include="ContentLTR\sass\assets\components\timeline\_timeline\_timeline-basic.scss" />
+    <Content Include="ContentLTR\sass\assets\components\timeline\_timeline\_timeline-modern.scss" />
+    <Content Include="ContentLTR\sass\assets\components\timeline\_timeline\_timeline-profile.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\alert.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\avatar.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\breadcrumb.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\custom-pagination.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\custom-tree_view.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\infobox.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\miscellaneous.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\popover.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\search.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\tooltip.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\_infobox\_infobox-1.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\_infobox\_infobox-2.scss" />
+    <Content Include="ContentLTR\sass\assets\elements\_infobox\_infobox-3.scss" />
+    <Content Include="ContentLTR\sass\assets\forms\bootstrap-form.scss" />
+    <Content Include="ContentLTR\sass\assets\forms\custom-clipboard.scss" />
+    <Content Include="ContentLTR\sass\assets\forms\switches.scss" />
+    <Content Include="ContentLTR\sass\assets\forms\theme-checkbox-radio.scss" />
+    <Content Include="ContentLTR\sass\assets\loader.scss" />
+    <Content Include="ContentLTR\sass\assets\main.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\coming-soon\style.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\contact_us.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\error\style-400.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\error\style-500.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\error\style-503.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\error\style-maintanence.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\faq\faq.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\faq\faq2.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\helpdesk.scss" />
+    <Content Include="ContentLTR\sass\assets\pages\privacy\privacy.scss" />
+    <Content Include="ContentLTR\sass\assets\scrollspyNav.scss" />
+    <Content Include="ContentLTR\sass\assets\structure.scss" />
+    <Content Include="ContentLTR\sass\assets\tables\table-basic.scss" />
+    <Content Include="ContentLTR\sass\assets\users\account-setting.scss" />
+    <Content Include="ContentLTR\sass\assets\users\user-profile.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\modules-widgets.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-account-invoice-one.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-account-invoice-two.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-activity-four.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-activity-one.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-activity-three.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-activity-two.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-card-four.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-card-one.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-card-two.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-chart-one.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-chart-three.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-chart-two.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-five.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-four.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-one.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-one_hybrid.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-table-one.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-table-three.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-table-two.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-three.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widget-two.scss" />
+    <Content Include="ContentLTR\sass\assets\widgets\_modules-widgets\_modules-widgets-media-query.scss" />
+    <Content Include="ContentLTR\sass\assets\_structure\_media-query.scss" />
+    <Content Include="ContentLTR\sass\assets\_structure\_navbar.scss" />
+    <Content Include="ContentLTR\sass\assets\_structure\_sidebar.scss" />
+    <Content Include="ContentLTR\sass\base\_base.scss" />
+    <Content Include="ContentLTR\sass\base\_color_variables.scss" />
+    <Content Include="ContentLTR\sass\base\_functions.scss" />
+    <Content Include="ContentLTR\sass\base\_mixins.scss" />
+    <Content Include="ContentLTR\sass\base\_utilities.scss" />
+    <Content Include="ContentLTR\sass\plugins\animate\animate.scss" />
+    <Content Include="ContentLTR\sass\plugins\autocomplete\autocomplete.scss" />
+    <Content Include="ContentLTR\sass\plugins\bootstrap-range-Slider\bootstrap-slider.scss" />
+    <Content Include="ContentLTR\sass\plugins\bootstrap-select\bootstrap-select.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\drag-and-drop\dragula\dragula.scss" />
+    <Content Include="ContentLTR\sass\plugins\drag-and-drop\dragula\example.scss" />
+    <Content Include="ContentLTR\sass\plugins\dropify\dropify.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\editors\markdown\simplemde.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\editors\quill\quill.bubble.scss" />
+    <Content Include="ContentLTR\sass\plugins\editors\quill\quill.snow.scss" />
+    <Content Include="ContentLTR\sass\plugins\file-upload\file-upload-with-preview.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\flatpickr\custom-flatpickr.scss" />
+    <Content Include="ContentLTR\sass\plugins\fullcalendar\custom-fullcalendar.advance.scss" />
+    <Content Include="ContentLTR\sass\plugins\fullcalendar\fullcalendar.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\fullcalendar\fullcalendar.scss" />
+    <Content Include="ContentLTR\sass\plugins\jquery-step\jquery.steps.scss" />
+    <Content Include="ContentLTR\sass\plugins\jvector\jquery-jvectormap-2.0.3.scss" />
+    <Content Include="ContentLTR\sass\plugins\lightbox\custom-photswipe.scss" />
+    <Content Include="ContentLTR\sass\plugins\lightbox\photoswipe.scss" />
+    <Content Include="ContentLTR\sass\plugins\loaders\custom-loader.scss" />
+    <Content Include="ContentLTR\sass\plugins\noUiSlider\custom-nouiSlider.scss" />
+    <Content Include="ContentLTR\sass\plugins\perfect-scrollbar\perfect-scrollbar.scss" />
+    <Content Include="ContentLTR\sass\plugins\pricing-table\css\component.scss" />
+    <Content Include="ContentLTR\sass\plugins\pricing-table\css\_pricing-table\_pricing-table-animated.scss" />
+    <Content Include="ContentLTR\sass\plugins\pricing-table\css\_pricing-table\_pricing-table-basic.scss" />
+    <Content Include="ContentLTR\sass\plugins\pricing-table\css\_pricing-table\_pricing-table-toggle.scss" />
+    <Content Include="ContentLTR\sass\plugins\select2\select2.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\sweetalerts\sweetalert.scss" />
+    <Content Include="ContentLTR\sass\plugins\sweetalerts\sweetalert2.min.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\custom_dt_custom.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\custom_dt_html5.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\custom_dt_miscellaneous.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\custom_dt_multiple_tables.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\datatables-dark.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\datatables.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\dt-global_style-dark.scss" />
+    <Content Include="ContentLTR\sass\plugins\table\datatable\dt-global_style.scss" />
+    <Content Include="ContentLTR\sass\plugins\tagInput\tags-input.scss" />
+    <Content Include="ContentRTL\plugins\dropify\fonts\dropify.eot" />
+    <Content Include="ContentRTL\plugins\dropify\fonts\dropify.ttf" />
+    <Content Include="ContentRTL\plugins\dropify\fonts\dropify.woff" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="ContentRTL\plugins\font-icons\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="ContentRTL\sass\assets\apps\contacts.scss" />
+    <Content Include="ContentRTL\sass\assets\apps\invoice.scss" />
+    <Content Include="ContentRTL\sass\assets\apps\mailbox.scss" />
+    <Content Include="ContentRTL\sass\assets\apps\mailing-chat.scss" />
+    <Content Include="ContentRTL\sass\assets\apps\notes.scss" />
+    <Content Include="ContentRTL\sass\assets\apps\scrumboard.scss" />
+    <Content Include="ContentRTL\sass\assets\apps\todolist.scss" />
+    <Content Include="ContentRTL\sass\assets\authentication\form-1.scss" />
+    <Content Include="ContentRTL\sass\assets\authentication\form-2.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\card.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-1.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-2.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-3.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-4.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-5.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-6.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-7.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-8.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_card-9.scss" />
+    <Content Include="ContentRTL\sass\assets\components\cards\_card\_media-query.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-carousel.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-countdown.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-counter.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-list-group.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-media_object.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-modal.scss" />
+    <Content Include="ContentRTL\sass\assets\components\custom-sweetalert.scss" />
+    <Content Include="ContentRTL\sass\assets\components\tabs-accordian\custom-accordions.scss" />
+    <Content Include="ContentRTL\sass\assets\components\tabs-accordian\custom-tabs.scss" />
+    <Content Include="ContentRTL\sass\assets\components\timeline\custom-timeline.scss" />
+    <Content Include="ContentRTL\sass\assets\components\timeline\_timeline\_timeline-alter.scss" />
+    <Content Include="ContentRTL\sass\assets\components\timeline\_timeline\_timeline-basic.scss" />
+    <Content Include="ContentRTL\sass\assets\components\timeline\_timeline\_timeline-modern.scss" />
+    <Content Include="ContentRTL\sass\assets\components\timeline\_timeline\_timeline-profile.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\alert.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\avatar.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\breadcrumb.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\custom-pagination.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\custom-tree_view.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\infobox.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\miscellaneous.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\popover.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\search.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\tooltip.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\_infobox\_infobox-1.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\_infobox\_infobox-2.scss" />
+    <Content Include="ContentRTL\sass\assets\elements\_infobox\_infobox-3.scss" />
+    <Content Include="ContentRTL\sass\assets\forms\bootstrap-form.scss" />
+    <Content Include="ContentRTL\sass\assets\forms\custom-clipboard.scss" />
+    <Content Include="ContentRTL\sass\assets\forms\switches.scss" />
+    <Content Include="ContentRTL\sass\assets\forms\theme-checkbox-radio.scss" />
+    <Content Include="ContentRTL\sass\assets\loader.scss" />
+    <Content Include="ContentRTL\sass\assets\main.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\coming-soon\style.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\contact_us.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\error\style-400.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\error\style-500.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\error\style-503.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\error\style-maintanence.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\faq\faq.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\faq\faq2.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\helpdesk.scss" />
+    <Content Include="ContentRTL\sass\assets\pages\privacy\privacy.scss" />
+    <Content Include="ContentRTL\sass\assets\scrollspyNav.scss" />
+    <Content Include="ContentRTL\sass\assets\structure.scss" />
+    <Content Include="ContentRTL\sass\assets\tables\table-basic.scss" />
+    <Content Include="ContentRTL\sass\assets\users\account-setting.scss" />
+    <Content Include="ContentRTL\sass\assets\users\user-profile.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\modules-widgets.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-account-invoice-one.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-account-invoice-two.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-activity-four.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-activity-one.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-activity-three.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-activity-two.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-card-four.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-card-one.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-card-two.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-chart-one.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-chart-three.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-chart-two.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-five.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-four.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-one.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-one_hybrid.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-table-one.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-table-three.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-table-two.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-three.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widget-two.scss" />
+    <Content Include="ContentRTL\sass\assets\widgets\_modules-widgets\_modules-widgets-media-query.scss" />
+    <Content Include="ContentRTL\sass\assets\_structure\_media-query.scss" />
+    <Content Include="ContentRTL\sass\assets\_structure\_navbar.scss" />
+    <Content Include="ContentRTL\sass\assets\_structure\_sidebar.scss" />
+    <Content Include="ContentRTL\sass\base\_base.scss" />
+    <Content Include="ContentRTL\sass\base\_color_variables.scss" />
+    <Content Include="ContentRTL\sass\base\_functions.scss" />
+    <Content Include="ContentRTL\sass\base\_mixins.scss" />
+    <Content Include="ContentRTL\sass\base\_utilities.scss" />
+    <Content Include="ContentRTL\sass\plugins\animate\animate.scss" />
+    <Content Include="ContentRTL\sass\plugins\autocomplete\autocomplete.scss" />
+    <Content Include="ContentRTL\sass\plugins\bootstrap-range-Slider\bootstrap-slider.scss" />
+    <Content Include="ContentRTL\sass\plugins\bootstrap-select\bootstrap-select.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\drag-and-drop\dragula\dragula.scss" />
+    <Content Include="ContentRTL\sass\plugins\drag-and-drop\dragula\example.scss" />
+    <Content Include="ContentRTL\sass\plugins\dropify\dropify.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\editors\markdown\simplemde.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\editors\quill\quill.bubble.scss" />
+    <Content Include="ContentRTL\sass\plugins\editors\quill\quill.snow.scss" />
+    <Content Include="ContentRTL\sass\plugins\file-upload\file-upload-with-preview.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\flatpickr\custom-flatpickr.scss" />
+    <Content Include="ContentRTL\sass\plugins\fullcalendar\custom-fullcalendar.advance.scss" />
+    <Content Include="ContentRTL\sass\plugins\fullcalendar\fullcalendar.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\fullcalendar\fullcalendar.scss" />
+    <Content Include="ContentRTL\sass\plugins\jquery-step\jquery.steps.scss" />
+    <Content Include="ContentRTL\sass\plugins\jvector\jquery-jvectormap-2.0.3.scss" />
+    <Content Include="ContentRTL\sass\plugins\lightbox\custom-photswipe.scss" />
+    <Content Include="ContentRTL\sass\plugins\lightbox\photoswipe.scss" />
+    <Content Include="ContentRTL\sass\plugins\loaders\custom-loader.scss" />
+    <Content Include="ContentRTL\sass\plugins\noUiSlider\custom-nouiSlider.scss" />
+    <Content Include="ContentRTL\sass\plugins\perfect-scrollbar\perfect-scrollbar.scss" />
+    <Content Include="ContentRTL\sass\plugins\pricing-table\css\component.scss" />
+    <Content Include="ContentRTL\sass\plugins\pricing-table\css\_pricing-table\_pricing-table-animated.scss" />
+    <Content Include="ContentRTL\sass\plugins\pricing-table\css\_pricing-table\_pricing-table-basic.scss" />
+    <Content Include="ContentRTL\sass\plugins\pricing-table\css\_pricing-table\_pricing-table-toggle.scss" />
+    <Content Include="ContentRTL\sass\plugins\select2\select2.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\sweetalerts\sweetalert.scss" />
+    <Content Include="ContentRTL\sass\plugins\sweetalerts\sweetalert2.min.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\custom_dt_custom.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\custom_dt_html5.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\custom_dt_miscellaneous.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\custom_dt_multiple_tables.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\datatables-dark.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\datatables.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\dt-global_style-dark.scss" />
+    <Content Include="ContentRTL\sass\plugins\table\datatable\dt-global_style.scss" />
+    <Content Include="ContentRTL\sass\plugins\tagInput\tags-input.scss" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ElaqatClient\Index.cshtml" />
+    <Content Include="Views\ElaqatClient\Details.cshtml" />
+    <Content Include="Views\ElaqatClient\Create.cshtml" />
+    <Content Include="Views\ElaqatClient\Edit.cshtml" />
+    <Content Include="Views\ClientProject\Index.cshtml" />
+    <Content Include="Views\ClientProject\Details.cshtml" />
+    <Content Include="Views\ClientProject\Create.cshtml" />
+    <Content Include="Views\ClientProject\Edit.cshtml" />
+    <Content Include="Views\ClientProject\IndexOfBrandWatchClientProject.cshtml" />
+    <Content Include="Views\ClientProject\AssignProjectToClient.cshtml" />
+    <Content Include="Views\Shared\_LayoutRTL.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Shared\_LayoutRTLLogin.cshtml" />
+    <Content Include="Views\Shared\_LayoutStaf.cshtml" />
+    <Content Include="Views\Shared\_LayoutRTLStaf.cshtml" />
+    <Content Include="Views\ClientProject\AssignImprtedProjectToClient.cshtml" />
+    <Content Include="Views\ClientProjectCategory\Index.cshtml" />
+    <Content Include="Views\ClientProjectCategory\Details.cshtml" />
+    <Content Include="Views\ClientProjectQuerie\Index.cshtml" />
+    <Content Include="Views\ClientProjectQuerie\Details.cshtml" />
+    <Content Include="Views\ClientProjectCategory\Edit.cshtml" />
+    <Content Include="Views\ClientProjectCategory\Delete.cshtml" />
+    <Content Include="Views\ClientProjectCategory\EditSubCategory.cshtml" />
+    <Content Include="Views\ClientProjectCategory\DeleteSubCategory.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\EmployeeMention\GetMentionsByProjectID.cshtml" />
+    <Content Include="Views\Shared\_LayoutMention.cshtml" />
+    <Content Include="Views\Shared\_LayoutRTLMention.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedCategoeries.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedSubCategoeries.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedCategoeries.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedSubCategoeries.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedQueries.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTags.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedTags.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedContentSources.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedContentSources.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedReactScoreOverAll.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedReactScoreOverAll.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedReactScoreHarm.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedReactScoreHarm.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedReactScoreEmotionality.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedReactScoreEmotionality.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedSentiments.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedEmotions.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedEmotions.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedSocialPanal.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedSocialPanal.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedAuthorGroup.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedAuthorGroup.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedLocation.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedLocation.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedLanguage.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedLanguage.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedSiteLists.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedSiteLists.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTwitterMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedTwitterMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTwitterVerificationTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedTwitterVerificationTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedFaceBookMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedFaceBookMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedInstagramMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedInstagramMentionTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedSubredditTopics.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedSubredditTopics.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTwitterAccountTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedTwitterAccountTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTwitterGenders.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTwitterProfessions.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedTwitterProfessions.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedTwitterInterests.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedTwitterInterests.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedSubTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllExcludedSubTypes.cshtml" />
+    <Content Include="Views\EmployeeMention\GetMentionsForProject.cshtml" />
+    <Content Include="Views\EmployeeMention\DeleteAllProjectMentionFromProject.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\ElaqatClient\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Employee\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangeEmployeePassword.cshtml" />
+    <Content Include="Views\Employee\CreateELaqatMasterAdmin.cshtml" />
+    <Content Include="Views\NewsBarDomain\Index.cshtml" />
+    <Content Include="Views\NewsBarDomain\Create.cshtml" />
+    <Content Include="Views\NewsBarDomain\Details.cshtml" />
+    <Content Include="Views\NewsBarDomain\Delete.cshtml" />
+    <Content Include="Views\NewsBarDomain\DeleteAllProjectNewsBars.cshtml" />
+    <Content Include="Views\NewsBarDomain\Edit.cshtml" />
+    <Content Include="Views\EmployeeMention\GetAllIncludedDomains.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\BrandWatchClientProjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ClientPage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ClientPage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ClientPage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ClientPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DashBoard.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashBoard.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DashBoard.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DashBoard.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ElaqatEmployeePage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ElaqatEmployeePage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ElaqatEmployeePage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ElaqatEmployeePage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomePage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomePage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomePage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomePage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LayoutPage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LayoutPage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LayoutPage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LayoutPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LoginPage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginPage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LoginPage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Mention.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mention.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Mention.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mention.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NewsBarPage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewsBarPage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NewsBarPage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NewsBarPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Projects.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Projects.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Projects.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Projects.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RegisterPage.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegisterPage.ar.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RegisterPage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegisterPage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1661</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1661/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

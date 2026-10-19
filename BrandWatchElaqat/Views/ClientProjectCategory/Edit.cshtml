@@ -1,0 +1,170 @@
+﻿@model BrandWatchElaqat.ViewModel.ClientProjectCategoryVM
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.Projects.UpdateCategoery;
+    HttpCookie cookie = Request.Cookies["Language"];
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/assets/css/authentication/form-2.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/assets/css/forms/theme-checkbox-radio.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/assets/css/forms/switches.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/assets/css/authentication/form-2.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/assets/css/forms/theme-checkbox-radio.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/assets/css/forms/switches.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/assets/css/authentication/form-2.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/assets/css/forms/theme-checkbox-radio.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/assets/css/forms/switches.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+
+        }
+    }
+
+
+
+</head>
+@using (Html.BeginForm("Edit", "ClientProjectCategory", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+    <div class="row layout-top-spacing">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <div class="form" style="padding-bottom: 3%">
+                <div class="form-container outer">
+                    <div class="form-form">
+                        <div class="form-form-wrap">
+                            <div class="form-container">
+                                <div class="form-content">
+
+                                    <h1 class="">@BrandWatchElaqat.Resources.Projects.UpdateCategoery</h1>
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    <form class="text-left">
+                                        <div class="form">
+
+
+                                            <div id="project-client" class="field-wrapper input mb-2">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.ProjectName)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.DropDownListFor(model => model.SelectedProjectId, Model.ClientProjectList, BrandWatchElaqat.Resources.Projects.SelectProject, htmlAttributes: new { @class = "form-control Dropdownlist-select" })
+
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.SelectedProjectId, "", new { @class = "text-danger" })
+
+
+                                            </div>
+
+                                            <div id="projectName-field" class="field-wrapper input">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.CategoryName)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control mb-4", @placeholder = BrandWatchElaqat.Resources.Projects.CategoryName } })
+
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
+                                            </div>
+
+
+                                            <div id="projectBrandWatchID-field" class="field-wrapper input">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.BrandWatchCategoryID)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.EditorFor(model => model.BrandWatchCategoeryID, new { htmlAttributes = new { @class = "form-control mb-4", @placeholder = BrandWatchElaqat.Resources.Projects.BrandWatchCategoryID } })
+
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.BrandWatchCategoeryID, "", new { @class = "text-danger" })
+                                            </div>
+
+
+                                          
+
+                                            <div class="d-sm-flex justify-content-between">
+                                                <button type="submit" class="btn btn-primary" value="">@BrandWatchElaqat.Resources.Projects.Edit</button>
+                                                <a href='@Url.Action("Index")' class="forgot-pass-link makeLinkBlue">@BrandWatchElaqat.Resources.Projects.ProjectCategoryTitle</a>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/assets/js/chosen.jquery.js")"></script>
+
+
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/assets/js/chosen.jquery.js")"></script>
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/assets/js/chosen.jquery.js")"></script>
+
+        }
+    }
+
+
+}

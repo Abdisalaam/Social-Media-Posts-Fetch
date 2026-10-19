@@ -1,0 +1,233 @@
+﻿@model BrandWatchElaqat.ViewModel.ClientProjectVM
+
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.Projects.PageTitleAssign;
+    HttpCookie cookie = Request.Cookies["Language"];
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/assets/css/authentication/form-2.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/assets/css/forms/theme-checkbox-radio.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/assets/css/forms/switches.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/assets/css/authentication/form-2.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/assets/css/forms/theme-checkbox-radio.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/assets/css/forms/switches.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/assets/css/authentication/form-2.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/assets/css/forms/theme-checkbox-radio.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/assets/css/forms/switches.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/assets/css/chosen.css")" rel="stylesheet" type="text/css" />
+
+
+        }
+    }
+
+
+
+</head>
+@using (Html.BeginForm("AssignImprtedProjectToClient", "ClientProject", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+    <div class="row layout-top-spacing">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+            <div class="form" style="padding-bottom: 3%">
+                <div class="form-container outer">
+                    <div class="form-form">
+                        <div class="form-form-wrap">
+                            <div class="form-container">
+                                <div class="form-content">
+
+                                    <h1 class="">@BrandWatchElaqat.Resources.Projects.PageHeaderAssign</h1>
+                                    <p class="">@BrandWatchElaqat.Resources.Projects.PageSupHeaderAssign</p>
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    <form class="text-left">
+                                        <div class="form">
+
+                                            <div id="project-id" class="field-wrapper input">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.ProjectID)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control mb-4", @disabled = "disabled" } })
+                                                    <div class="input-group-append">
+
+                                                        <div>
+                                                            <span class="form-control">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div id="Project-name" class="field-wrapper input">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.ProjectName)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.EditorFor(model => model.ProjectName, new { htmlAttributes = new { @class = "form-control mb-4", @disabled = "disabled" } })
+                                                    <div class="input-group-append">
+
+                                                        <div>
+                                                            <span class="form-control">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.ProjectName, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div id="Project-brandWatchID" class="field-wrapper input">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.ProjectBrandWatchID)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.EditorFor(model => model.ProjectBrandWatchID, new { htmlAttributes = new { @class = "form-control mb-4", @disabled = "disabled" } })
+                                                    <div class="input-group-append">
+
+                                                        <div>
+                                                            <span class="form-control">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.ProjectBrandWatchID, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div id="Project-creationDate" class="field-wrapper input">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.ProjectCreationDate)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.EditorFor(model => model.ProjectCreationDate, new { htmlAttributes = new { @class = "form-control mb-4", @disabled = "disabled" } })
+                                                    <div class="input-group-append">
+
+                                                        <div>
+                                                            <span class="form-control">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.ProjectCreationDate, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div id="project-client" class="field-wrapper input mb-2">
+                                                <div class="input-group">
+                                                    @Html.Label(BrandWatchElaqat.Resources.Projects.ClientName)
+                                                    <div class="input-group-append">
+                                                        <div>
+                                                            <span class="text-danger">*</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    @Html.DropDownListFor(model => model.SelectedElaqatClientId, Model.ClientList, BrandWatchElaqat.Resources.Projects.SelectClient, htmlAttributes: new { @class = "form-control Dropdownlist-select" })
+                                                    <div class="input-group-append">
+
+                                                        <div>
+                                                            <span class="form-control">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @Html.ValidationMessageFor(model => model.SelectedElaqatClientId, "", new { @class = "text-danger" })
+
+
+                                            </div>
+
+                                            <div class="d-sm-flex justify-content-between">
+                                                <button type="submit" class="btn btn-primary" value="">@BrandWatchElaqat.Resources.Projects.Assign</button>
+                                                <a href='@Url.Action("Index")' class="forgot-pass-link makeLinkBlue">@BrandWatchElaqat.Resources.Projects.ListOfAssignedProject</a>
+                                                <a href='@Url.Action("IndexOfBrandWatchClientProject")' class="forgot-pass-link makeLinkBlue">@BrandWatchElaqat.Resources.Projects.ListOfBrandWatchProjects</a>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+}
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/assets/js/chosen.jquery.js")"></script>
+
+
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/assets/js/chosen.jquery.js")"></script>
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/assets/js/chosen.jquery.js")"></script>
+
+        }
+    }
+
+
+}

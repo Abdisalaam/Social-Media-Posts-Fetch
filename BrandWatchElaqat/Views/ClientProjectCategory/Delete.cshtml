@@ -1,0 +1,307 @@
+﻿@model BrandWatchElaqat.Models.ClientProjectCategory
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.Projects.PageTitleCategoryDetails;
+    HttpCookie cookie = Request.Cookies["Language"];
+    int counter = 0;
+    int counterQuery = 0;
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+
+
+        }
+    }
+
+
+
+</head>
+
+
+@using (Html.BeginForm("Delete", "ClientProjectCategory", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m => m.Id)
+    <div class="layout-top-spacing">
+        <div class="row" id="cancel-row">
+            <div class="col-xl-12 col-lg-12 col-sm-12">
+                <div class="d-sm-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary" value="">@BrandWatchElaqat.Resources.Projects.Delete</button>
+                    <a href='@Url.Action("Index")' class="forgot-pass-link makeLinkBlue">@BrandWatchElaqat.Resources.Projects.ProjectCategoryTitle</a>
+
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-sm-12">
+                <h3 style="text-align:center">@BrandWatchElaqat.Resources.Projects.DeleteCategory</h3>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                <div class="widget-content widget-content-area br-6">
+                    <div class="table-responsive mb-4 mt-4">
+                        <table class="table table-hover non-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.CategoryName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.BrandWatchCategoryID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.ProjectName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.BrandWatchProjectID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.ClientName)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.Action)
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.CategoryName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.BrandWatchCategoeryID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.ClientProject.ProjectName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.ClientProject.BrandwatchProjectID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.ClientProject.ElaqatClient.ClientName)
+                                    </td>
+                                    <td>
+                                        @{
+                                            var queryIds = "";
+                                            foreach (var queryId in Model.ClintProjectCtegoryQueryIDs)
+                                            {
+                                                queryIds += " / " + queryId.BrandWatchQueryID;
+                                            }
+                                        }
+                                        @queryIds
+
+                                    </td>
+
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-dark btn-sm" href='@Url.Action("Details", "ClientProject", new { id = Model.ClientProjectId })'>@BrandWatchElaqat.Resources.Projects.PageTitleDetails</a>
+                                            <a class="btn btn-dark btn-sm" href='@Url.Action("Edit", new { id = Model.Id })'>@BrandWatchElaqat.Resources.Projects.Edit</a>                                           
+                                        </div>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-xl-12 col-lg-12 col-sm-12">
+                <h3 style="text-align:center">@BrandWatchElaqat.Resources.Projects.ProjectSubCategoryTitle</h3>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                <div class="widget-content widget-content-area br-6">
+                    <div class="table-responsive mb-4 mt-4">
+                        <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayName("#")
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.SubCategoryName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.BrandWatchSubCategoryID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Projects.OrderingNumber)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.Action)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.ClientProjectSubCategories)
+                                {
+                                    counter++;
+                                    <tr>
+                                        <td>
+                                            @counter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.SubCategoryName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.BrandWatchSubCategoryID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OrderingNumber)
+                                        </td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a class="btn btn-dark btn-sm" href='@Url.Action("EditSubCategory", new { id = item.Id })'>@BrandWatchElaqat.Resources.Projects.Edit</a>
+                                                <a class="btn btn-dark btn-sm" href='@Url.Action("DeleteSubCategory", new { id = item.Id })'>@BrandWatchElaqat.Resources.Projects.Delete</a>
+
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+                                }
+
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-12 col-lg-12 col-sm-12">
+                <div class="d-sm-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary" value="">@BrandWatchElaqat.Resources.Projects.Delete</button>
+                    <a href='@Url.Action("Index")' class="forgot-pass-link makeLinkBlue">@BrandWatchElaqat.Resources.Projects.ProjectCategoryTitle</a>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+}
+
+
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "Showing page _PAGE_ of _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "Search...",
+                            "sLengthMenu": "Results :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+
+
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "إبحث...",
+                            "sLengthMenu": "النتائج :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+            <script>
+                $('#html5-extension').DataTable({
+
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                        "sSearchPlaceholder": "إبحث...",
+                        "sLengthMenu": "النتائج :  _MENU_",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7
+                });
+            </script>
+
+        }
+    }
+
+
+}
+
+
+
+

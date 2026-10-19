@@ -1,0 +1,250 @@
+﻿@model BrandWatchElaqat.Models.NewsBarDomain
+
+
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.NewsBarPage.DetailsTitle;
+    HttpCookie cookie = Request.Cookies["Language"];
+    string msg = ViewBag.Message;
+
+
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+
+        }
+    }
+
+
+
+</head>
+
+
+
+<div class="layout-top-spacing">
+    <div class="row" id="cancel-row">
+        <div class="col-xl-12 col-lg-12 col-sm-12">
+            <h3 style="text-align:center">@BrandWatchElaqat.Resources.NewsBarPage.DetailsPageTitle</h3>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div>
+
+                <a class="btn btn-default btn-primary" href='@Url.Action("Create")'>@BrandWatchElaqat.Resources.NewsBarPage.CreateNewNewsBarTitel</a>
+
+                <a class="btn btn-default btn-primary" href='@Url.Action("DeleteAllProjectNewsBars")'>@BrandWatchElaqat.Resources.NewsBarPage.DeleteAllDomains</a>
+                <a class="btn btn-default btn-primary" href='@Url.Action("Delete",  new { id = Model.Id })'>@BrandWatchElaqat.Resources.NewsBarPage.Delete</a>
+                <a class="btn btn-default btn-primary" href='@Url.Action("Edit",  new { id = Model.Id })'>@BrandWatchElaqat.Resources.NewsBarPage.EditDomain</a>
+                <a class="btn btn-default btn-primary" href='@Url.Action("Index")'>@BrandWatchElaqat.Resources.NewsBarPage.IndexPageTitle</a>
+
+
+            </div>
+
+
+            <div class="widget-content widget-content-area br-6">
+                <div class="table-responsive mb-4 mt-4">
+                    <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                               
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.NewsBarPage.Domain)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.NewsBarPage.DomainURL)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.NewsBarPage.PublicationName)
+                                </th>
+
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.NewsBarPage.Favicon)
+                                </th>
+
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                                <tr>
+                                   
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.Domain)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.DomainURL)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => Model.PublicationName)
+                                    </td>
+
+                                    @{
+                                        if (Model.Favicon != null)
+                                        {
+
+                                            <td>
+                                                <img src="data:image/jpg;base64,@Convert.ToBase64String(Model.Favicon)" alt="Image" style="width:60px" />
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                @BrandWatchElaqat.Resources.DashBoard.NoData
+                                            </td>
+                                        }
+                                    }
+                                </tr>
+                            
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "Showing page _PAGE_ of _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "Search...",
+                            "sLengthMenu": "Results :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "إبحث...",
+                            "sLengthMenu": "النتائج :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+            <script>
+                $('#html5-extension').DataTable({
+
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                        "sSearchPlaceholder": "إبحث...",
+                        "sLengthMenu": "النتائج :  _MENU_",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7
+                });
+            </script>
+
+        }
+
+        if (!string.IsNullOrEmpty(msg))
+        {
+            <script type="text/javascript">
+            Snackbar.show({
+               text: '@msg',
+              pos: 'top-center'
+             });
+            </script>
+
+        }
+    }
+
+
+}
+
+
+
+

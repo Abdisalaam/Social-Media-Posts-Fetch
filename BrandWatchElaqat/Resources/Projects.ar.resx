@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Assign" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="AuthorGroupBrantWatchID" xml:space="preserve">
+    <value>الرقم التعريفي</value>
+  </data>
+  <data name="AuthorGroupBrantWatchName" xml:space="preserve">
+    <value>إسم الناشر</value>
+  </data>
+  <data name="AuthorGroupDetails" xml:space="preserve">
+    <value>تفاصيل الناشر</value>
+  </data>
+  <data name="AuthorList" xml:space="preserve">
+    <value>قائمة الناشرين</value>
+  </data>
+  <data name="BooleanQuery" xml:space="preserve">
+    <value>الإستعلام المنطقي</value>
+  </data>
+  <data name="BrandWatchCategoryID" xml:space="preserve">
+    <value>رقم الفئة التعريفي</value>
+  </data>
+  <data name="BrandWatchClientID" xml:space="preserve">
+    <value>الرقم التعريفي لعميل براندواتش</value>
+  </data>
+  <data name="BrandWatchClientName" xml:space="preserve">
+    <value>عميل براندواتش</value>
+  </data>
+  <data name="BrandWatchProjectID" xml:space="preserve">
+    <value>رقم المشروع التعريفي</value>
+  </data>
+  <data name="BrandWatchSubCategoryID" xml:space="preserve">
+    <value>رقم القطاع التعريفي</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>إسم الفئة</value>
+  </data>
+  <data name="CategoryQueriesIDS" xml:space="preserve">
+    <value>أرقام الإستعلام التعريفي</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>تاريخ الإنشاء</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DeleteCategory" xml:space="preserve">
+    <value>حذف الفئة</value>
+  </data>
+  <data name="DeleteSubCategory" xml:space="preserve">
+    <value>حذف القطاع</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>تفاصيل</value>
+  </data>
+  <data name="DetailsLocationGroup" xml:space="preserve">
+    <value>تفاصيل الموقع</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>إسم العرض</value>
+  </data>
+  <data name="DomainName" xml:space="preserve">
+    <value>رابط الموقع</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تحديث المشروع</value>
+  </data>
+  <data name="FilterList" xml:space="preserve">
+    <value>قائمة المرشحات</value>
+  </data>
+  <data name="GetMention" xml:space="preserve">
+    <value>حدث الإشعارات</value>
+  </data>
+  <data name="GetProjects" xml:space="preserve">
+    <value>تصفح المشروع</value>
+  </data>
+  <data name="LastModificationDate" xml:space="preserve">
+    <value>تاريخ التحديث</value>
+  </data>
+  <data name="LastModifiedUserName" xml:space="preserve">
+    <value>إسم المحدث</value>
+  </data>
+  <data name="ListOfAssignedProject" xml:space="preserve">
+    <value>قائمة مشاريع العملاء</value>
+  </data>
+  <data name="ListOfBrandWatchProjects" xml:space="preserve">
+    <value>قائمة مشاريع براندواتش</value>
+  </data>
+  <data name="LocationGroupBrantWatchID" xml:space="preserve">
+    <value>الرقم التعريفي</value>
+  </data>
+  <data name="LocationGroupBrantWatchName" xml:space="preserve">
+    <value>إسم الموقع</value>
+  </data>
+  <data name="LocationList" xml:space="preserve">
+    <value>قائمة المواقع</value>
+  </data>
+  <data name="OrderingNumber" xml:space="preserve">
+    <value>رقم الترتيب</value>
+  </data>
+  <data name="PageHeaderAssign" xml:space="preserve">
+    <value>تعيين عميل لمشروع</value>
+  </data>
+  <data name="PageHeaderEdit" xml:space="preserve">
+    <value>تحديث المشروع</value>
+  </data>
+  <data name="PageSupHeaderAssign" xml:space="preserve">
+    <value>سيتم تعيين العميل المختار لهذا المشروع</value>
+  </data>
+  <data name="PageTitleAssign" xml:space="preserve">
+    <value>تعيين عميل لمشروع</value>
+  </data>
+  <data name="PageTitleCategoryDetails" xml:space="preserve">
+    <value>تفاصيل الفئة</value>
+  </data>
+  <data name="PageTitleDetails" xml:space="preserve">
+    <value>تفاصيل المشروع</value>
+  </data>
+  <data name="PageTitleEdit" xml:space="preserve">
+    <value>تحديث المشروع</value>
+  </data>
+  <data name="PageTitleIndex" xml:space="preserve">
+    <value>قائمة المشاريع</value>
+  </data>
+  <data name="ProjectBrandWatchID" xml:space="preserve">
+    <value>الرقم التعريفي لدي براندواتش</value>
+  </data>
+  <data name="ProjectCategoryTitle" xml:space="preserve">
+    <value>فئات المشروع</value>
+  </data>
+  <data name="ProjectCreationDate" xml:space="preserve">
+    <value>تاريخ إنشاء المشروع</value>
+  </data>
+  <data name="ProjectHeaderQuery" xml:space="preserve">
+    <value>إستعلامات المشروع</value>
+  </data>
+  <data name="ProjectID" xml:space="preserve">
+    <value>الرقم التعريفي</value>
+  </data>
+  <data name="ProjectIsNotActive" xml:space="preserve">
+    <value>المشروع غير نشط</value>
+  </data>
+  <data name="ProjectIsNotFound" xml:space="preserve">
+    <value>لم يتم العثور على المشروع</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>إسم المشروع</value>
+  </data>
+  <data name="ProjectSubCategoryTitle" xml:space="preserve">
+    <value>القطاعات</value>
+  </data>
+  <data name="QueryActive" xml:space="preserve">
+    <value>نشط</value>
+  </data>
+  <data name="QueryContentSource" xml:space="preserve">
+    <value>مصدر المحتوي</value>
+  </data>
+  <data name="QueryHighLights" xml:space="preserve">
+    <value>تسليط الضوء</value>
+  </data>
+  <data name="QueryID" xml:space="preserve">
+    <value>رقم الإستعلام التعريفي</value>
+  </data>
+  <data name="QueryLanguages" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="QueryName" xml:space="preserve">
+    <value>إسم الإستعلام</value>
+  </data>
+  <data name="QueryState" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="RuleTagBrandWatchID" xml:space="preserve">
+    <value>الرقم التعريفي</value>
+  </data>
+  <data name="RuleTagBrandWatchName" xml:space="preserve">
+    <value>إسم علامة القاعدة</value>
+  </data>
+  <data name="RuleTagDetail" xml:space="preserve">
+    <value>تفاصيل علامة القاعدة</value>
+  </data>
+  <data name="RuleTagList" xml:space="preserve">
+    <value>إسم علامات القاعدة</value>
+  </data>
+  <data name="RuleTagName" xml:space="preserve">
+    <value>إسم علامة القاعدة</value>
+  </data>
+  <data name="SelectAccountType" xml:space="preserve">
+    <value>إختر نوع الحساب</value>
+  </data>
+  <data name="SelectAuthor" xml:space="preserve">
+    <value>إختر الناشر</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>إختر الفئة</value>
+  </data>
+  <data name="SelectClient" xml:space="preserve">
+    <value>إختر عميل</value>
+  </data>
+  <data name="SelectContentSource" xml:space="preserve">
+    <value> إختر مصدر المحتوي</value>
+  </data>
+  <data name="SelectGender" xml:space="preserve">
+    <value>إختر الجنس</value>
+  </data>
+  <data name="SelectProject" xml:space="preserve">
+    <value>إختر مشروع</value>
+  </data>
+  <data name="SelectRuleTag" xml:space="preserve">
+    <value>إختر علامة القاعدة</value>
+  </data>
+  <data name="SelectSentiment" xml:space="preserve">
+    <value>إختر المشاعر</value>
+  </data>
+  <data name="SelectSourceType" xml:space="preserve">
+    <value>إختر نوع المحتوي</value>
+  </data>
+  <data name="SelectSubCategory" xml:space="preserve">
+    <value>إختر القطاع</value>
+  </data>
+  <data name="SelectSubType" xml:space="preserve">
+    <value>إختر قطاع المحتوي</value>
+  </data>
+  <data name="Shared" xml:space="preserve">
+    <value>النوع</value>
+  </data>
+  <data name="ShowMentionsStartingFrom" xml:space="preserve">
+    <value>إظهار المنشورات إبتداءً من</value>
+  </data>
+  <data name="SiteBrandWatchID" xml:space="preserve">
+    <value>الرقم التعريفي</value>
+  </data>
+  <data name="SiteList" xml:space="preserve">
+    <value>قائمة المواقع الإلكترونية</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>إسم الموقع</value>
+  </data>
+  <data name="SourceType" xml:space="preserve">
+    <value>نوع المحتوي</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>تاريخ البدء</value>
+  </data>
+  <data name="SubCategoryName" xml:space="preserve">
+    <value>إسم القطاع</value>
+  </data>
+  <data name="SubType" xml:space="preserve">
+    <value>نوع قطاع المحتوي</value>
+  </data>
+  <data name="TechnicalFailure" xml:space="preserve">
+    <value>خطأ فني, الرجاء إعادة المحاولة.</value>
+  </data>
+  <data name="ThisDeedIsIrreversible" xml:space="preserve">
+    <value>إذا واصلت عملية الحذف، فلن يكون هناك رجعة فيها. سيتم حذف كافة البيانات</value>
+  </data>
+  <data name="UpdateAuthorGroup" xml:space="preserve">
+    <value>تحديث الناشر</value>
+  </data>
+  <data name="UpdateCategoeries" xml:space="preserve">
+    <value>تحديث الفئات</value>
+  </data>
+  <data name="UpdateCategoery" xml:space="preserve">
+    <value>تحديث الفئة</value>
+  </data>
+  <data name="UpdateFilter" xml:space="preserve">
+    <value>تحديث المرشحات</value>
+  </data>
+  <data name="UpdateLocationGroup" xml:space="preserve">
+    <value>تحديث الموقع</value>
+  </data>
+  <data name="UpdateRuleTags" xml:space="preserve">
+    <value>تحديث علامة القاعدة</value>
+  </data>
+  <data name="UpdateSite" xml:space="preserve">
+    <value>تحديث المواقع الإلكترونية</value>
+  </data>
+  <data name="UpdateSubCategories" xml:space="preserve">
+    <value>تحديث القطاعات</value>
+  </data>
+  <data name="UpdateSubCategory" xml:space="preserve">
+    <value>تحديث القطاع</value>
+  </data>
+</root>

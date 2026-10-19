@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Assign" xml:space="preserve">
+    <value>Assign</value>
+  </data>
+  <data name="AuthorGroupBrantWatchID" xml:space="preserve">
+    <value>Brand Watch ID</value>
+  </data>
+  <data name="AuthorGroupBrantWatchName" xml:space="preserve">
+    <value>Author Group Name</value>
+  </data>
+  <data name="AuthorGroupDetails" xml:space="preserve">
+    <value>Details Author Group</value>
+  </data>
+  <data name="AuthorList" xml:space="preserve">
+    <value>Authors List</value>
+  </data>
+  <data name="BooleanQuery" xml:space="preserve">
+    <value>Boolean Query</value>
+  </data>
+  <data name="BrandWatchCategoryID" xml:space="preserve">
+    <value>Brand Watch Category ID</value>
+  </data>
+  <data name="BrandWatchClientID" xml:space="preserve">
+    <value>Brand Watch Client ID</value>
+  </data>
+  <data name="BrandWatchClientName" xml:space="preserve">
+    <value>Brand Watch Client Name</value>
+  </data>
+  <data name="BrandWatchProjectID" xml:space="preserve">
+    <value>Brand Watch Project ID</value>
+  </data>
+  <data name="BrandWatchSubCategoryID" xml:space="preserve">
+    <value>Brand Watch Sub Category ID</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="CategoryQueriesIDS" xml:space="preserve">
+    <value>Queries IDs</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>Creation Date</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteCategory" xml:space="preserve">
+    <value>Delete Category</value>
+  </data>
+  <data name="DeleteSubCategory" xml:space="preserve">
+    <value>Delete Sub Category</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DetailsLocationGroup" xml:space="preserve">
+    <value>Details Locations</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>DisplayName</value>
+  </data>
+  <data name="DomainName" xml:space="preserve">
+    <value>Domain URL</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit Project</value>
+  </data>
+  <data name="FilterList" xml:space="preserve">
+    <value>Filter List</value>
+  </data>
+  <data name="GetMention" xml:space="preserve">
+    <value>Get Mentions</value>
+  </data>
+  <data name="GetProjects" xml:space="preserve">
+    <value>Get Projects</value>
+  </data>
+  <data name="LastModificationDate" xml:space="preserve">
+    <value>Modification Date</value>
+  </data>
+  <data name="LastModifiedUserName" xml:space="preserve">
+    <value>Modifieder Name</value>
+  </data>
+  <data name="ListOfAssignedProject" xml:space="preserve">
+    <value>List Of Assigned Projects</value>
+  </data>
+  <data name="ListOfBrandWatchProjects" xml:space="preserve">
+    <value>List Of Brand Watch Projects</value>
+  </data>
+  <data name="LocationGroupBrantWatchID" xml:space="preserve">
+    <value>Brand Watch ID</value>
+  </data>
+  <data name="LocationGroupBrantWatchName" xml:space="preserve">
+    <value>Location Group Name</value>
+  </data>
+  <data name="LocationList" xml:space="preserve">
+    <value>Locations List</value>
+  </data>
+  <data name="OrderingNumber" xml:space="preserve">
+    <value>Ordering Number</value>
+  </data>
+  <data name="PageHeaderAssign" xml:space="preserve">
+    <value>Assign Client To Project</value>
+  </data>
+  <data name="PageHeaderEdit" xml:space="preserve">
+    <value>Edit Project</value>
+  </data>
+  <data name="PageSupHeaderAssign" xml:space="preserve">
+    <value>This Project Will Be Assigned To The Selected Client</value>
+  </data>
+  <data name="PageTitleAssign" xml:space="preserve">
+    <value>Assign Client To Project</value>
+  </data>
+  <data name="PageTitleCategoryDetails" xml:space="preserve">
+    <value>Category Details</value>
+  </data>
+  <data name="PageTitleDetails" xml:space="preserve">
+    <value>Project Details</value>
+  </data>
+  <data name="PageTitleEdit" xml:space="preserve">
+    <value>Edit Project</value>
+  </data>
+  <data name="PageTitleIndex" xml:space="preserve">
+    <value>Projects List</value>
+  </data>
+  <data name="ProjectBrandWatchID" xml:space="preserve">
+    <value>Brand Watch Project ID</value>
+  </data>
+  <data name="ProjectCategoryTitle" xml:space="preserve">
+    <value>Project Categories</value>
+  </data>
+  <data name="ProjectCreationDate" xml:space="preserve">
+    <value>Project Creation Date</value>
+  </data>
+  <data name="ProjectHeaderQuery" xml:space="preserve">
+    <value>Project Queries</value>
+  </data>
+  <data name="ProjectID" xml:space="preserve">
+    <value>Project ID</value>
+  </data>
+  <data name="ProjectIsNotActive" xml:space="preserve">
+    <value>Project Is Not Active</value>
+  </data>
+  <data name="ProjectIsNotFound" xml:space="preserve">
+    <value>Project Is Not Found</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ProjectSubCategoryTitle" xml:space="preserve">
+    <value>Sub Categoeries</value>
+  </data>
+  <data name="QueryActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="QueryContentSource" xml:space="preserve">
+    <value>Content Source</value>
+  </data>
+  <data name="QueryHighLights" xml:space="preserve">
+    <value>Highlights</value>
+  </data>
+  <data name="QueryID" xml:space="preserve">
+    <value>Query ID</value>
+  </data>
+  <data name="QueryLanguages" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="QueryName" xml:space="preserve">
+    <value>Query Name</value>
+  </data>
+  <data name="QueryState" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="RuleTagBrandWatchID" xml:space="preserve">
+    <value>Brand Watch Rule Tag ID</value>
+  </data>
+  <data name="RuleTagBrandWatchName" xml:space="preserve">
+    <value>Brand Watch Rule Tag Name</value>
+  </data>
+  <data name="RuleTagDetail" xml:space="preserve">
+    <value>Details Rule Tag</value>
+  </data>
+  <data name="RuleTagList" xml:space="preserve">
+    <value>Rule Tags List</value>
+  </data>
+  <data name="RuleTagName" xml:space="preserve">
+    <value>Rule Tag</value>
+  </data>
+  <data name="SelectAccountType" xml:space="preserve">
+    <value>Select Account Type</value>
+  </data>
+  <data name="SelectAuthor" xml:space="preserve">
+    <value>Select Author</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="SelectClient" xml:space="preserve">
+    <value>Select Client</value>
+  </data>
+  <data name="SelectContentSource" xml:space="preserve">
+    <value>Select Content Source</value>
+  </data>
+  <data name="SelectGender" xml:space="preserve">
+    <value>Select Gender</value>
+  </data>
+  <data name="SelectProject" xml:space="preserve">
+    <value>Select Project</value>
+  </data>
+  <data name="SelectRuleTag" xml:space="preserve">
+    <value>Select Rule Tag</value>
+  </data>
+  <data name="SelectSentiment" xml:space="preserve">
+    <value>Select Sentiment</value>
+  </data>
+  <data name="SelectSourceType" xml:space="preserve">
+    <value>Select Source Type</value>
+  </data>
+  <data name="SelectSubCategory" xml:space="preserve">
+    <value>Select Sub Category</value>
+  </data>
+  <data name="SelectSubType" xml:space="preserve">
+    <value>Select Sub Type</value>
+  </data>
+  <data name="Shared" xml:space="preserve">
+    <value>Shared</value>
+  </data>
+  <data name="ShowMentionsStartingFrom" xml:space="preserve">
+    <value>Show Mentions Starting From</value>
+  </data>
+  <data name="SiteBrandWatchID" xml:space="preserve">
+    <value>Brand Watch Site ID</value>
+  </data>
+  <data name="SiteList" xml:space="preserve">
+    <value>Sites List</value>
+  </data>
+  <data name="SiteName" xml:space="preserve">
+    <value>Sites Name</value>
+  </data>
+  <data name="SourceType" xml:space="preserve">
+    <value>Source Type</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="SubCategoryName" xml:space="preserve">
+    <value>Sub Category Name</value>
+  </data>
+  <data name="SubType" xml:space="preserve">
+    <value>Sub Type</value>
+  </data>
+  <data name="TechnicalFailure" xml:space="preserve">
+    <value>Technical Failure, please try again.</value>
+  </data>
+  <data name="ThisDeedIsIrreversible" xml:space="preserve">
+    <value>If you continue with deleting operation it is irreversible. All data will be deleted</value>
+  </data>
+  <data name="UpdateAuthorGroup" xml:space="preserve">
+    <value>Update Author Group</value>
+  </data>
+  <data name="UpdateCategoeries" xml:space="preserve">
+    <value>Update Categoeries</value>
+  </data>
+  <data name="UpdateCategoery" xml:space="preserve">
+    <value>Update Categoery</value>
+  </data>
+  <data name="UpdateFilter" xml:space="preserve">
+    <value>Update Filter</value>
+  </data>
+  <data name="UpdateLocationGroup" xml:space="preserve">
+    <value>Update Location</value>
+  </data>
+  <data name="UpdateRuleTags" xml:space="preserve">
+    <value>Update Rule Tags</value>
+  </data>
+  <data name="UpdateSite" xml:space="preserve">
+    <value>Update Sites</value>
+  </data>
+  <data name="UpdateSubCategories" xml:space="preserve">
+    <value>Update Sub Categories</value>
+  </data>
+  <data name="UpdateSubCategory" xml:space="preserve">
+    <value>Update Sub Category</value>
+  </data>
+</root>

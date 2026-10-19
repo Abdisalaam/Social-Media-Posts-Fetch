@@ -1,0 +1,208 @@
+﻿@model BrandWatchElaqat.Models.ClientProject
+
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.Mention.DeleteAllMentionsFromProject;
+    HttpCookie cookie = Request.Cookies["Language"];
+    string msg = ViewBag.Message;
+
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.css")" rel="stylesheet" type="text/css" />
+
+
+        }
+    }
+
+
+
+</head>
+
+@using (Html.BeginForm("DeleteAllProjectMentionFromProject", "EmployeeMention", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+{
+    @Html.HiddenFor(m => m.Id)
+    <div class="layout-top-spacing">
+        <div class="row" id="cancel-row">
+
+            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+
+                <div>
+                    <a class="btn btn-default btn-primary" href='@Url.Action("GetMentionsForProject","EmployeeMention", new { id = Model.Id })'>@BrandWatchElaqat.Resources.Mention.DashBoard</a>
+                    <a class="btn btn-default btn-dark" href='@Url.Action("GetMentionsByProjectID","EmployeeMention", new { id = Model.Id })'>@BrandWatchElaqat.Resources.Mention.MentionIndexTitle</a>
+                    <a class="btn btn-default btn-primary" href='@Url.Action("Details", "ElaqatClient",new {id = Model.ElaqatClientId})'>@BrandWatchElaqat.Resources.ClientPage.PageTitleDetails</a>
+                    <a class="btn btn-default btn-dark" href='@Url.Action("Edit", "ClientProject",new {id = Model.Id})'>@BrandWatchElaqat.Resources.Projects.Edit</a>
+                    <a class="btn btn-default btn-primary" href='@Url.Action("GetBrandWatchGlobalMetricsForClientProject", "ClientProject",new {id = Model.Id})'>@BrandWatchElaqat.Resources.Projects.UpdateFilter</a>
+                    <a class="btn btn-default btn-dark" href='@Url.Action("Details","ClientProject", new { id = Model.Id })'>@BrandWatchElaqat.Resources.Projects.Details</a>
+
+                </div>
+                <div class="widget-content widget-content-area br-6">
+                    <div class="col-xl-12 col-lg-12 col-sm-12">
+                        <h3 style="text-align:center">@BrandWatchElaqat.Resources.Mention.DeleteAllMentionsFromProject</h3>
+                    </div>
+                    <div class="table-responsive mb-4 mt-4">
+                        <table id="myProjectTable" class="table table-hover non-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.ProjectName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.ProjectID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.ClientName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.ClientId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.ProjectCreationDate)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName(BrandWatchElaqat.Resources.Mention.TotalMentions)
+                                    </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ProjectName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.BrandwatchProjectID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ElaqatClient.ClientName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ElaqatClientId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ProjectCreationDate)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.ProjectMentions.Count)
+                                    </td>
+                                </tr>
+
+
+                        </table>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12 col-sm-12">
+                        <button id="applyFilterBtn" type="submit" class="btn btn-default btn-primary btn-block mb-4 mr-2">
+                            <span id="applyFilterBtnText" class="">
+
+                                @BrandWatchElaqat.Resources.Projects.Delete
+                            </span>
+
+
+                            <span id="applyFilterBtnSpinner" style="display:none;" class="spinner-border text-dark mr-2 align-self-center loader-xs"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+}
+
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+
+
+
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/notification/snackbar/snackbar.min.js")"></script>
+
+
+
+        }
+        if (!string.IsNullOrEmpty(msg))
+        {
+            <script type="text/javascript">
+            Snackbar.show({
+               text: '@msg',
+              pos: 'top-center'
+             });
+            </script>
+
+        }
+    }
+
+
+}
+
+
+
+

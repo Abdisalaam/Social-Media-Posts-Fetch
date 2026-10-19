@@ -1,0 +1,417 @@
+﻿@model BrandWatchElaqat.Models.ClientProjectQuerie
+@{
+    ViewBag.Title = BrandWatchElaqat.Resources.Projects.PageTitleDetails;
+    HttpCookie cookie = Request.Cookies["Language"];
+    int counter = 0;
+    int counterQuery = 0;
+}
+
+<head>
+    @{
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+                Layout = "~/Views/Shared/_LayoutStaf.cshtml";
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentLTR/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+
+            }
+            else
+            {
+                Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+                <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+
+            }
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_LayoutRTLStaf.cshtml";
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/custom_dt_html5.css")" rel="stylesheet" type="text/css" />
+            <link href="@Url.Content("~/ContentRTL/plugins/table/datatable/dt-global_style.css")" rel="stylesheet" type="text/css" />
+
+
+        }
+    }
+
+
+
+</head>
+
+
+<div class="layout-top-spacing">
+    <div class="row" id="cancel-row">
+        <div class="col-xl-12 col-lg-12 col-sm-12">
+            <h3 style="text-align:center">@BrandWatchElaqat.Resources.Projects.CategoryQueriesIDS</h3>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div class="widget-content widget-content-area br-6">
+                <div class="table-responsive mb-4 mt-4">
+                    <table class="table table-hover non-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryID)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryName)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.DisplayName)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryState)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryActive)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.ProjectName)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.ProjectID)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.BrandWatchProjectID)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.CreationDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.StartDate)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.LastModificationDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.LastModifiedUserName)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryLanguages)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.Description)
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.Action)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.BrandWatchQueryId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.QuerieName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.DisplayName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.State)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.Active)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.ClientProject.ProjectName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.ClientProject.Id)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.ClientProject.BrandwatchProjectID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.CreationDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.StartDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.LastModificationDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.LastModifiedUsername)
+                                </td>
+                                <td>
+                                    @{
+                                        var _languages = "";
+                                        foreach (var language in Model.QueryLanguages)
+                                        {
+                                            _languages += " / " + language.Language;
+                                        }
+                                    }
+                                    @_languages
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => Model.Description)
+                                </td>
+
+                                <td>
+                                    <div class="btn-group">
+                                        <a class="btn btn-dark btn-sm" href='@Url.Action("Details", "ClientProject",new {id = Model.ClientProjectId})'>@BrandWatchElaqat.Resources.Projects.PageTitleDetails</a>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xl-12 col-lg-12 col-sm-12">
+            <h3 style="text-align:center">@BrandWatchElaqat.Resources.Projects.QueryContentSource</h3>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div class="widget-content widget-content-area br-6">
+                <div class="table-responsive mb-4 mt-4">
+                    <table id="queryTable" class="table table-hover non-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayName("#")
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryName)
+                                </th>
+
+                               
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.Action)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.QueryContentSources)
+                            {
+                                counterQuery++;
+                                <tr>
+                                    <td>
+                                        @counterQuery
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SourceName)
+                                    </td>
+                                   
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-dark btn-sm" href='@Url.Action("Details", "ClientProject",new {id = Model.ClientProjectId})'>@BrandWatchElaqat.Resources.Projects.PageTitleDetails</a>
+                                          
+                                           
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                            }
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-12 col-lg-12 col-sm-12">
+            <h3 style="text-align:center">@BrandWatchElaqat.Resources.Projects.QueryHighLights</h3>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+            <div class="widget-content widget-content-area br-6">
+                <div class="table-responsive mb-4 mt-4">
+                    <table id="html5-extension" class="table table-hover non-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayName("#")
+                                </th>
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.Projects.QueryHighLights)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayName(BrandWatchElaqat.Resources.ClientPage.Action)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.QueryHighLightTerms)
+                            {
+                                counter++;
+                                <tr>
+                                    <td>
+                                        @counter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.HighLightTerm)
+                                    </td>
+
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-dark btn-sm" href='@Url.Action("Details", "ClientProject",new {id = Model.ClientProjectId})'>@BrandWatchElaqat.Resources.Projects.PageTitleDetails</a>
+                                           
+                                        </div>
+                                    </td>
+
+
+                                </tr>
+                            }
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+
+    @{
+        @Scripts.Render("~/bundles/jqueryval")
+
+        if (cookie != null && cookie.Value != null)
+        {
+            if (cookie.Value == "en")
+            {
+
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentLTR/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "Showing page _PAGE_ of _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "Search...",
+                            "sLengthMenu": "Results :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+                <script>
+                    $('#queryTable').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "Showing page _PAGE_ of _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "Search...",
+                            "sLengthMenu": "Results :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+
+
+            }
+            else
+            {
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+                <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+                <script>
+                    $('#html5-extension').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "إبحث...",
+                            "sLengthMenu": "النتائج :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+                <script>
+                    $('#queryTable').DataTable({
+
+                        "oLanguage": {
+                            "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                            "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                            "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                            "sSearchPlaceholder": "إبحث...",
+                            "sLengthMenu": "النتائج :  _MENU_",
+                        },
+                        "stripeClasses": [],
+                        "lengthMenu": [7, 10, 20, 50],
+                        "pageLength": 7
+                    });
+                </script>
+
+            }
+        }
+        else
+        {
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/datatables.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/dataTables.buttons.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/jszip.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.html5.min.js")"></script>
+            <script src="@Url.Content("~/ContentRTL/plugins/table/datatable/button-ext/buttons.print.min.js")"></script>
+            <script>
+                $('#html5-extension').DataTable({
+
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                        "sSearchPlaceholder": "إبحث...",
+                        "sLengthMenu": "النتائج :  _MENU_",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7
+                });
+            </script>
+            <script>
+                $('#queryTable').DataTable({
+
+                    "oLanguage": {
+                        "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
+                        "sInfo": "جارٍ عرض الصفحة _PAGE_ من _PAGES_",
+                        "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                        "sSearchPlaceholder": "إبحث...",
+                        "sLengthMenu": "النتائج :  _MENU_",
+                    },
+                    "stripeClasses": [],
+                    "lengthMenu": [7, 10, 20, 50],
+                    "pageLength": 7
+                });
+            </script>
+
+        }
+    }
+
+
+}
+
+
+
+

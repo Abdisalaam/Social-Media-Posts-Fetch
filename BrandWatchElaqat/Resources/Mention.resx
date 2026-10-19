@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountType" xml:space="preserve">
+    <value>Account Type</value>
+  </data>
+  <data name="AddedDate" xml:space="preserve">
+    <value>Added Date</value>
+  </data>
+  <data name="Assignment" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ContentSource" xml:space="preserve">
+    <value>Content Source</value>
+  </data>
+  <data name="Continent" xml:space="preserve">
+    <value>Continent</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="DailyVisitors" xml:space="preserve">
+    <value>Daily Visitors</value>
+  </data>
+  <data name="DeleteMention" xml:space="preserve">
+    <value>Delete Mention</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="GetMentionFromBR" xml:space="preserve">
+    <value>Get Mention From Brand Watch</value>
+  </data>
+  <data name="GuidNumber" xml:space="preserve">
+    <value>Guid Number</value>
+  </data>
+  <data name="Impact" xml:space="preserve">
+    <value>Impact</value>
+  </data>
+  <data name="Impressions" xml:space="preserve">
+    <value>Impressions</value>
+  </data>
+  <data name="Interest" xml:space="preserve">
+    <value>Interest</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="MediaType" xml:space="preserve">
+    <value>Media Type</value>
+  </data>
+  <data name="MentionDeleteTitle" xml:space="preserve">
+    <value>Delete Mention</value>
+  </data>
+  <data name="MentionDetails" xml:space="preserve">
+    <value>Mention Details</value>
+  </data>
+  <data name="MentionDetailsTitle" xml:space="preserve">
+    <value>Mention Details</value>
+  </data>
+  <data name="MentionEditTitle" xml:space="preserve">
+    <value>Edit Mention</value>
+  </data>
+  <data name="MentionIndexTitle" xml:space="preserve">
+    <value>Mentions List</value>
+  </data>
+  <data name="MonthlyVisitors" xml:space="preserve">
+    <value>Monthly Visitors</value>
+  </data>
+  <data name="NotReleasedToClient" xml:space="preserve">
+    <value>Not Released</value>
+  </data>
+  <data name="OriginalUrl" xml:space="preserve">
+    <value>Original Url</value>
+  </data>
+  <data name="PageType" xml:space="preserve">
+    <value>Page Type</value>
+  </data>
+  <data name="PageTypeName" xml:space="preserve">
+    <value>Page Type Name</value>
+  </data>
+  <data name="QueryID" xml:space="preserve">
+    <value>Query ID</value>
+  </data>
+  <data name="QueryName" xml:space="preserve">
+    <value>Query Name</value>
+  </data>
+  <data name="ReachEstimate" xml:space="preserve">
+    <value>Reach Estimate</value>
+  </data>
+  <data name="ReceivedDate" xml:space="preserve">
+    <value>ReceivedDate</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="Release" xml:space="preserve">
+    <value>Release</value>
+  </data>
+  <data name="ReleaseToClient" xml:space="preserve">
+    <value>Released To Client</value>
+  </data>
+  <data name="ResourceId" xml:space="preserve">
+    <value>Resource ID</value>
+  </data>
+  <data name="Sentiment" xml:space="preserve">
+    <value>Sentiment</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>Snippet</value>
+  </data>
+  <data name="SubCategories" xml:space="preserve">
+    <value>Sub Categories</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="UpdateMention" xml:space="preserve">
+    <value>Update Mention</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="CategoryAlradyIsAdded" xml:space="preserve">
+    <value>Category Alrady Added</value>
+  </data>
+  <data name="CategoryNumber" xml:space="preserve">
+    <value>Category ID</value>
+  </data>
+  <data name="ContentAndMentionType" xml:space="preserve">
+    <value>Content &amp; Mention</value>
+  </data>
+  <data name="ContentSourceAlradyIsAdded" xml:space="preserve">
+    <value>Content Source Already Added</value>
+  </data>
+  <data name="ContentSourceNumber" xml:space="preserve">
+    <value>Content Source Number</value>
+  </data>
+  <data name="ExcludeContentSource" xml:space="preserve">
+    <value>Exclude Content Source</value>
+  </data>
+  <data name="ExcludedCategory" xml:space="preserve">
+    <value>Exclude Category</value>
+  </data>
+  <data name="ExcludedSubCategory" xml:space="preserve">
+    <value>Exclude Sub Category</value>
+  </data>
+  <data name="ExcludedTag" xml:space="preserve">
+    <value>Exclude Tag</value>
+  </data>
+  <data name="HasbeenSuccessfullyAdded" xml:space="preserve">
+    <value>Has been Successfully Added</value>
+  </data>
+  <data name="HasbeenSuccessfullyDeleted" xml:space="preserve">
+    <value>Has been Successfully Deleted</value>
+  </data>
+  <data name="IncludeContentSource" xml:space="preserve">
+    <value>Include Content Source</value>
+  </data>
+  <data name="IncludedCategory" xml:space="preserve">
+    <value>Include Category</value>
+  </data>
+  <data name="IncludedSubCategory" xml:space="preserve">
+    <value>Include Sub Category</value>
+  </data>
+  <data name="IncludedTag" xml:space="preserve">
+    <value>Include Tag</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="QueryAlradyIsAdded" xml:space="preserve">
+    <value>Query Alrady Added</value>
+  </data>
+  <data name="QueryNumber" xml:space="preserve">
+    <value>Query Number</value>
+  </data>
+  <data name="SelectExcludedCategory" xml:space="preserve">
+    <value>Select Excluded Category</value>
+  </data>
+  <data name="SelectExcludedCountenSource" xml:space="preserve">
+    <value>Select Excluded Content Source</value>
+  </data>
+  <data name="SelectExcludedSubCategory" xml:space="preserve">
+    <value>Select Excluded Sub Category</value>
+  </data>
+  <data name="SelectExcludedTag" xml:space="preserve">
+    <value>Select Excluded Tag</value>
+  </data>
+  <data name="SelectQuery" xml:space="preserve">
+    <value>Select Query</value>
+  </data>
+  <data name="SelectTag" xml:space="preserve">
+    <value>Select Tag</value>
+  </data>
+  <data name="SubCategoryAlradyIsAdded" xml:space="preserve">
+    <value>Sub Category Alrady Added</value>
+  </data>
+  <data name="SubCategoryNumber" xml:space="preserve">
+    <value>Sub Category ID</value>
+  </data>
+  <data name="TagAlradyIsAdded" xml:space="preserve">
+    <value>Tag Alrady Added</value>
+  </data>
+  <data name="TagNumber" xml:space="preserve">
+    <value>Tag Number</value>
+  </data>
+  <data name="ExcludedMentionType" xml:space="preserve">
+    <value>Excluded Mention Type</value>
+  </data>
+  <data name="IncludedMentionType" xml:space="preserve">
+    <value>Included Mention Type</value>
+  </data>
+  <data name="MentionType" xml:space="preserve">
+    <value>Mention Type</value>
+  </data>
+  <data name="MentionTypeAlradyIsAdded" xml:space="preserve">
+    <value>Mention Type Alrady Added</value>
+  </data>
+  <data name="MentionTypeNumber" xml:space="preserve">
+    <value>Mention Type Number</value>
+  </data>
+  <data name="SelectExcludedMentionType" xml:space="preserve">
+    <value>Select Excluded Mention Type</value>
+  </data>
+  <data name="SelectIncludedMentionType" xml:space="preserve">
+    <value>Select Included Mention Type</value>
+  </data>
+  <data name="BasicFilters" xml:space="preserve">
+    <value>Main Filters</value>
+  </data>
+  <data name="EmotionalityName" xml:space="preserve">
+    <value>Emotionality</value>
+  </data>
+  <data name="EmotionalityNumber" xml:space="preserve">
+    <value>EmotionalityNumber</value>
+  </data>
+  <data name="ExcludedEmotionality" xml:space="preserve">
+    <value>Excluded Emotionality</value>
+  </data>
+  <data name="ExcludedHarm" xml:space="preserve">
+    <value>Excluded Harm</value>
+  </data>
+  <data name="ExcludedOverall" xml:space="preserve">
+    <value>Excluded Overall</value>
+  </data>
+  <data name="HarmName" xml:space="preserve">
+    <value>Harm</value>
+  </data>
+  <data name="HarmNumber" xml:space="preserve">
+    <value>Harm Number</value>
+  </data>
+  <data name="IncludedEmotionality" xml:space="preserve">
+    <value>Included Emotionality</value>
+  </data>
+  <data name="IncludedHarm" xml:space="preserve">
+    <value>Included Harm</value>
+  </data>
+  <data name="IncludedOverall" xml:space="preserve">
+    <value>Included Overall</value>
+  </data>
+  <data name="OverAllName" xml:space="preserve">
+    <value>Overall</value>
+  </data>
+  <data name="OverAllNumber" xml:space="preserve">
+    <value>Overall Number</value>
+  </data>
+  <data name="ReactEmotionalityAlradyIsAdded" xml:space="preserve">
+    <value>React Score Emotionality Alrady Added</value>
+  </data>
+  <data name="ReactHarmAlradyIsAdded" xml:space="preserve">
+    <value>React Score Harm Alrady Added</value>
+  </data>
+  <data name="ReactOverAllAlradyIsAdded" xml:space="preserve">
+    <value>React Over All Alrady Added</value>
+  </data>
+  <data name="ReactScore" xml:space="preserve">
+    <value>React Score</value>
+  </data>
+  <data name="ReactScoreType" xml:space="preserve">
+    <value>Score Type</value>
+  </data>
+  <data name="SelectExcludedEmotionality" xml:space="preserve">
+    <value>Select Excluded Emotionality</value>
+  </data>
+  <data name="SelectExcludedHarm" xml:space="preserve">
+    <value>Select Excluded Harm</value>
+  </data>
+  <data name="SelectExcludedOverall" xml:space="preserve">
+    <value>Select Excluded Overall</value>
+  </data>
+  <data name="SelectIncludedEmotionality" xml:space="preserve">
+    <value>Select Included Emotionality</value>
+  </data>
+  <data name="SelectIncludedHarm" xml:space="preserve">
+    <value>Select Included Harm</value>
+  </data>
+  <data name="SelectIncludedOverall" xml:space="preserve">
+    <value>Select Included Overall</value>
+  </data>
+  <data name="Emotion" xml:space="preserve">
+    <value>Emotion</value>
+  </data>
+  <data name="EmotionAlreadyIsAdded" xml:space="preserve">
+    <value>Emotion Already Added</value>
+  </data>
+  <data name="EmotionNumber" xml:space="preserve">
+    <value>Emotion Number</value>
+  </data>
+  <data name="Emotions" xml:space="preserve">
+    <value>Emotions</value>
+  </data>
+  <data name="EngagementScore" xml:space="preserve">
+    <value>Engagement Score</value>
+  </data>
+  <data name="ExcludeEmotions" xml:space="preserve">
+    <value>Excluded Emotions</value>
+  </data>
+  <data name="IncludeEmotions" xml:space="preserve">
+    <value>Included Emotions</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="MaxEngagementScore" xml:space="preserve">
+    <value>Max Engagement Score</value>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>Min</value>
+  </data>
+  <data name="MinEngagementScore" xml:space="preserve">
+    <value>Min Engagement Score</value>
+  </data>
+  <data name="SelectExcludeEmotions" xml:space="preserve">
+    <value>Select Exclude Emotions</value>
+  </data>
+  <data name="SelectIncludeEmotions" xml:space="preserve">
+    <value>Select Include Emotions</value>
+  </data>
+  <data name="SelectSentiment" xml:space="preserve">
+    <value>Select Sentiment</value>
+  </data>
+  <data name="SentimentAlreadyIsAdded" xml:space="preserve">
+    <value>Sentiment Already Added</value>
+  </data>
+  <data name="SentimentAndEmotion" xml:space="preserve">
+    <value>Sentiment</value>
+  </data>
+  <data name="SentimentNumber" xml:space="preserve">
+    <value>Sentiment Number</value>
+  </data>
+  <data name="AuthorListAlreadyIsAdded" xml:space="preserve">
+    <value>Author List Already Added</value>
+  </data>
+  <data name="AuthorListName" xml:space="preserve">
+    <value>Author List Name</value>
+  </data>
+  <data name="AuthorListNumber" xml:space="preserve">
+    <value>Author List Number</value>
+  </data>
+  <data name="ExactMatch" xml:space="preserve">
+    <value>Exact Match</value>
+  </data>
+  <data name="ExcludeAuthorLists" xml:space="preserve">
+    <value>Exclude Author Lists</value>
+  </data>
+  <data name="ExcludeAuthorName" xml:space="preserve">
+    <value>Exclude Author Name</value>
+  </data>
+  <data name="ExcludedLocation" xml:space="preserve">
+    <value>Excluded Location</value>
+  </data>
+  <data name="ExcludedSocialPanel" xml:space="preserve">
+    <value>Exclude Social Panel</value>
+  </data>
+  <data name="IncludeAuthorLists" xml:space="preserve">
+    <value>Include Author Lists</value>
+  </data>
+  <data name="IncludeAuthorName" xml:space="preserve">
+    <value>Include Author Name</value>
+  </data>
+  <data name="IncludedLocation" xml:space="preserve">
+    <value>Included Location</value>
+  </data>
+  <data name="IncludedSocialPanel" xml:space="preserve">
+    <value>Include Social Panel</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="LocationIsAlreadyAdded" xml:space="preserve">
+    <value>Location Already Added</value>
+  </data>
+  <data name="LocationName" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="LocationNumber" xml:space="preserve">
+    <value>Location Number</value>
+  </data>
+  <data name="SelectExcludeAuthorLists" xml:space="preserve">
+    <value>Select Exclude Author Lists</value>
+  </data>
+  <data name="SelectExcludedLocation" xml:space="preserve">
+    <value>Select Excluded Location</value>
+  </data>
+  <data name="SelectExcludedSocialPanel" xml:space="preserve">
+    <value>Select Exclude Social Panel</value>
+  </data>
+  <data name="SelectIncludeAuthorLists" xml:space="preserve">
+    <value>Select Include Author Lists</value>
+  </data>
+  <data name="SelectIncludedLocation" xml:space="preserve">
+    <value>Select Included Location</value>
+  </data>
+  <data name="SelectIncludedSocialPanel" xml:space="preserve">
+    <value>Select Include Social Panel</value>
+  </data>
+  <data name="SocialPanalAlradyIsAdded" xml:space="preserve">
+    <value>Social Panal Alrady Added</value>
+  </data>
+  <data name="SocialPanel" xml:space="preserve">
+    <value>Social Panel</value>
+  </data>
+  <data name="SocialPanelName" xml:space="preserve">
+    <value>Social Panel Name</value>
+  </data>
+  <data name="SocialPanelNumber" xml:space="preserve">
+    <value>Social Panel Number</value>
+  </data>
+  <data name="Checked" xml:space="preserve">
+    <value>Checked</value>
+  </data>
+  <data name="ExcludedSiteList" xml:space="preserve">
+    <value>Excluded Site List</value>
+  </data>
+  <data name="ExcludeLanguage" xml:space="preserve">
+    <value>Exclude Language</value>
+  </data>
+  <data name="IncludedSiteList" xml:space="preserve">
+    <value>Included Site List</value>
+  </data>
+  <data name="IncludeLanguage" xml:space="preserve">
+    <value>Include Language</value>
+  </data>
+  <data name="LanguageAlreadyIsAdded" xml:space="preserve">
+    <value>Language Already Added</value>
+  </data>
+  <data name="LanguageName" xml:space="preserve">
+    <value>Language Name</value>
+  </data>
+  <data name="LanguageNumber" xml:space="preserve">
+    <value>Language Number</value>
+  </data>
+  <data name="MaxDailyVisitors" xml:space="preserve">
+    <value>Max daily Visitors</value>
+  </data>
+  <data name="MaxImpact" xml:space="preserve">
+    <value>Max Impact</value>
+  </data>
+  <data name="MaxMonthlyVisitors" xml:space="preserve">
+    <value>Max Monthly Visitors</value>
+  </data>
+  <data name="MaxRache" xml:space="preserve">
+    <value>Max Reach</value>
+  </data>
+  <data name="MinDailyVisitors" xml:space="preserve">
+    <value>Min daily Visitors</value>
+  </data>
+  <data name="MinImpact" xml:space="preserve">
+    <value>Min Impact</value>
+  </data>
+  <data name="MinMonthlyVisitors" xml:space="preserve">
+    <value>Min Monthly Visitors</value>
+  </data>
+  <data name="MinRache" xml:space="preserve">
+    <value>Min Reach</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Reach" xml:space="preserve">
+    <value>Reach</value>
+  </data>
+  <data name="ReachAndImpact" xml:space="preserve">
+    <value>Reach &amp; Impact</value>
+  </data>
+  <data name="SelectAssignment" xml:space="preserve">
+    <value>Select Assignment</value>
+  </data>
+  <data name="SelectChecked" xml:space="preserve">
+    <value>Select Checked</value>
+  </data>
+  <data name="SelectExcludedSiteList" xml:space="preserve">
+    <value>Select Excluded Site List</value>
+  </data>
+  <data name="SelectExcludeLanguage" xml:space="preserve">
+    <value>Select Exclude Language</value>
+  </data>
+  <data name="SelectIncludedSiteList" xml:space="preserve">
+    <value>Select Included Site List</value>
+  </data>
+  <data name="SelectIncludeLanguage" xml:space="preserve">
+    <value>Select Include Language</value>
+  </data>
+  <data name="SelectPriority" xml:space="preserve">
+    <value>Select Priority</value>
+  </data>
+  <data name="SelectStatus" xml:space="preserve">
+    <value>Select Status</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="SiteListAlreadyIsAdded" xml:space="preserve">
+    <value>Site List Already Added</value>
+  </data>
+  <data name="SiteListName" xml:space="preserve">
+    <value>Site List Name</value>
+  </data>
+  <data name="SiteListNumber" xml:space="preserve">
+    <value>Site List Number</value>
+  </data>
+  <data name="StarredMentions" xml:space="preserve">
+    <value>Starred Mentions</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="WorkflowAndStarred" xml:space="preserve">
+    <value>Workflow &amp; Starred</value>
+  </data>
+  <data name="AuthorKarma" xml:space="preserve">
+    <value>Author Karma</value>
+  </data>
+  <data name="Bluesky" xml:space="preserve">
+    <value>Bluesky</value>
+  </data>
+  <data name="ClientOrProjectDetailsAreMissing" xml:space="preserve">
+    <value>Client Or Project Details Are Missing, Please Review The Project Or The Client Details Than Try Again. </value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="ContainsPoll" xml:space="preserve">
+    <value>Contains Poll</value>
+  </data>
+  <data name="ExcludedTwitterVerificationType" xml:space="preserve">
+    <value>Excluded Verification Type</value>
+  </data>
+  <data name="ExcludeFilterBySubreddit" xml:space="preserve">
+    <value>Exclude Filter By SubReddit</value>
+  </data>
+  <data name="ExcludeFilterBySubredditTopic" xml:space="preserve">
+    <value>Exclude Filter By Subreddit Topic</value>
+  </data>
+  <data name="ExcludeSubreddit" xml:space="preserve">
+    <value>Exclude Subreddit</value>
+  </data>
+  <data name="FaceBook" xml:space="preserve">
+    <value>FaceBook</value>
+  </data>
+  <data name="FilterBySubreddit" xml:space="preserve">
+    <value>Filter By Subreddit</value>
+  </data>
+  <data name="Followers" xml:space="preserve">
+    <value>Followers</value>
+  </data>
+  <data name="Following" xml:space="preserve">
+    <value>Following</value>
+  </data>
+  <data name="IncludedTwitterVerificationType" xml:space="preserve">
+    <value>Included Verification Type</value>
+  </data>
+  <data name="IncludeFilterBySubreddit" xml:space="preserve">
+    <value>Include Filter By SubReddit</value>
+  </data>
+  <data name="IncludeFilterBySubredditTopic" xml:space="preserve">
+    <value>Include Filter By Subreddit Topic</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>Instagram</value>
+  </data>
+  <data name="Interactions" xml:space="preserve">
+    <value>Interactions</value>
+  </data>
+  <data name="Likes" xml:space="preserve">
+    <value>Likes</value>
+  </data>
+  <data name="MaxAuthorKarma" xml:space="preserve">
+    <value>Max Author Karma</value>
+  </data>
+  <data name="MaxComments" xml:space="preserve">
+    <value>Max Comments</value>
+  </data>
+  <data name="MaxFollowers" xml:space="preserve">
+    <value>Max Followers</value>
+  </data>
+  <data name="MaxFollowing" xml:space="preserve">
+    <value>Max Following</value>
+  </data>
+  <data name="MaxImpressions" xml:space="preserve">
+    <value>Max Impressions</value>
+  </data>
+  <data name="MaxInteractions" xml:space="preserve">
+    <value>Max Interactions</value>
+  </data>
+  <data name="MaxLikes" xml:space="preserve">
+    <value>Max Likes</value>
+  </data>
+  <data name="MaxPosts" xml:space="preserve">
+    <value>Max Posts</value>
+  </data>
+  <data name="MaxQuotes" xml:space="preserve">
+    <value>Max Quotes</value>
+  </data>
+  <data name="MaxRedditCommentCount" xml:space="preserve">
+    <value>Max Reddit Comment Count</value>
+  </data>
+  <data name="MaxRedditScore" xml:space="preserve">
+    <value>Max Reddit Score</value>
+  </data>
+  <data name="MaxReplies" xml:space="preserve">
+    <value>Max Replies</value>
+  </data>
+  <data name="MaxReposts" xml:space="preserve">
+    <value>Max Reposts</value>
+  </data>
+  <data name="MaxShares" xml:space="preserve">
+    <value>Max Shares</value>
+  </data>
+  <data name="MaxSubRedditSubscribers" xml:space="preserve">
+    <value>Max Sub Reddit Subscribers</value>
+  </data>
+  <data name="MaxTotalPosts" xml:space="preserve">
+    <value>Max Total Posts</value>
+  </data>
+  <data name="MinAuthorKarma" xml:space="preserve">
+    <value>Min Author Karma</value>
+  </data>
+  <data name="MinComments" xml:space="preserve">
+    <value>Min Comments</value>
+  </data>
+  <data name="MinFollowers" xml:space="preserve">
+    <value>Min Followers</value>
+  </data>
+  <data name="MinFollowing" xml:space="preserve">
+    <value>Min Following</value>
+  </data>
+  <data name="MinImpressions" xml:space="preserve">
+    <value>Min Impressions</value>
+  </data>
+  <data name="MinInteractions" xml:space="preserve">
+    <value>Min Interactions</value>
+  </data>
+  <data name="MinLikes" xml:space="preserve">
+    <value>Min Likes</value>
+  </data>
+  <data name="MinPosts" xml:space="preserve">
+    <value>Min Posts</value>
+  </data>
+  <data name="MinQuotes" xml:space="preserve">
+    <value>Min Quotes</value>
+  </data>
+  <data name="MinRedditCommentCount" xml:space="preserve">
+    <value>Min Reddit Comment Count</value>
+  </data>
+  <data name="MinRedditScore" xml:space="preserve">
+    <value>Min Reddit Score</value>
+  </data>
+  <data name="MinReplies" xml:space="preserve">
+    <value>Min Replies</value>
+  </data>
+  <data name="MinReposts" xml:space="preserve">
+    <value>Min Reposts</value>
+  </data>
+  <data name="MinShares" xml:space="preserve">
+    <value>Min Shares</value>
+  </data>
+  <data name="MinSubRedditSubscribers" xml:space="preserve">
+    <value>Min Sub Reddit Subscribers</value>
+  </data>
+  <data name="MinTotalPosts" xml:space="preserve">
+    <value>Min Total Posts</value>
+  </data>
+  <data name="NSFW" xml:space="preserve">
+    <value>Not Safe For Work</value>
+  </data>
+  <data name="Posts" xml:space="preserve">
+    <value>Posts</value>
+  </data>
+  <data name="PublicationName" xml:space="preserve">
+    <value>Publication Name</value>
+  </data>
+  <data name="Quotes" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="Reddit" xml:space="preserve">
+    <value>Reddit</value>
+  </data>
+  <data name="RedditCommentCount" xml:space="preserve">
+    <value>Reddit Comment Count</value>
+  </data>
+  <data name="RedditScore" xml:space="preserve">
+    <value>Reddit Score</value>
+  </data>
+  <data name="Replies" xml:space="preserve">
+    <value>Replies</value>
+  </data>
+  <data name="Reposts" xml:space="preserve">
+    <value>Reposts</value>
+  </data>
+  <data name="SelectContainsPoll" xml:space="preserve">
+    <value>Select Contains Poll</value>
+  </data>
+  <data name="SelectExcludedTwitterVerificationType" xml:space="preserve">
+    <value>Select Excluded Verification Type</value>
+  </data>
+  <data name="SelectExcludeSubredditTopic" xml:space="preserve">
+    <value>Select Exclude Subreddit Topic</value>
+  </data>
+  <data name="SelectIncludedCountenSource" xml:space="preserve">
+    <value>Select Include Content Source</value>
+  </data>
+  <data name="SelectIncludedTwitterVerificationType" xml:space="preserve">
+    <value>Select Included Verification Type</value>
+  </data>
+  <data name="SelectIncludeSubredditTopic" xml:space="preserve">
+    <value>Select Include Subreddit Topic</value>
+  </data>
+  <data name="SelectNSFW" xml:space="preserve">
+    <value>Select NSFW</value>
+  </data>
+  <data name="SelectTwitterVerification" xml:space="preserve">
+    <value>Select Verification</value>
+  </data>
+  <data name="SelectUserRole" xml:space="preserve">
+    <value>Select User Role</value>
+  </data>
+  <data name="Shares" xml:space="preserve">
+    <value>Shares</value>
+  </data>
+  <data name="SubRedditSubscribers" xml:space="preserve">
+    <value>Sub Reddit Subscribers</value>
+  </data>
+  <data name="SubredditTopicAlreadyAdded" xml:space="preserve">
+    <value>Topic Already Added</value>
+  </data>
+  <data name="SubredditTopicName" xml:space="preserve">
+    <value>Topic Name</value>
+  </data>
+  <data name="SubredditTopicNumber" xml:space="preserve">
+    <value>Topic Number</value>
+  </data>
+  <data name="TotalPosts" xml:space="preserve">
+    <value>Total Posts</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>X (Twitter)</value>
+  </data>
+  <data name="TwitterVerification" xml:space="preserve">
+    <value>Verification</value>
+  </data>
+  <data name="TwitterVerificationTypeAlreadyIsAdded" xml:space="preserve">
+    <value>Verification Type Already Added</value>
+  </data>
+  <data name="TwitterVerificationTypeName" xml:space="preserve">
+    <value>Verification Type</value>
+  </data>
+  <data name="TwitterVerificationTypeNumber" xml:space="preserve">
+    <value>Verification Type Number</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>User Role</value>
+  </data>
+  <data name="GetMentionFilterButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="AccountTypeAlreadyAdded" xml:space="preserve">
+    <value>Account Type Already Added</value>
+  </data>
+  <data name="AccountTypeName" xml:space="preserve">
+    <value>Account Type Name</value>
+  </data>
+  <data name="AccountTypeNumber" xml:space="preserve">
+    <value>Account Type Number</value>
+  </data>
+  <data name="ExcludedAccountType" xml:space="preserve">
+    <value>Exclude Account Type</value>
+  </data>
+  <data name="ExcludeTwitterInterest" xml:space="preserve">
+    <value>Exclude Interest</value>
+  </data>
+  <data name="ExcludeTwitterProfessions" xml:space="preserve">
+    <value>Exclude Professions</value>
+  </data>
+  <data name="IncludedAccountType" xml:space="preserve">
+    <value>Include Account Type</value>
+  </data>
+  <data name="IncludeTwitterInterest" xml:space="preserve">
+    <value>Include Interest</value>
+  </data>
+  <data name="IncludeTwitterProfessions" xml:space="preserve">
+    <value>Include Professions</value>
+  </data>
+  <data name="SelectExcludeAccountType" xml:space="preserve">
+    <value>Select Exclude Account Type</value>
+  </data>
+  <data name="SelectExcludeTwitterInterest" xml:space="preserve">
+    <value>Select Exclude Interest</value>
+  </data>
+  <data name="SelectExcludeTwitterProfession" xml:space="preserve">
+    <value>Select Exclude Profession</value>
+  </data>
+  <data name="SelectIncludeAccountType" xml:space="preserve">
+    <value>Select Include Account Type</value>
+  </data>
+  <data name="SelectIncludeTwitterInterest" xml:space="preserve">
+    <value>Select Include Interest</value>
+  </data>
+  <data name="SelectIncludeTwitterProfession" xml:space="preserve">
+    <value>Select Include Profession</value>
+  </data>
+  <data name="SelectTwitterGender" xml:space="preserve">
+    <value>Select Gender</value>
+  </data>
+  <data name="TwitterGender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="TwitterGenderAlreadyIsAdded" xml:space="preserve">
+    <value>Gender Already Added</value>
+  </data>
+  <data name="TwitterGenderName" xml:space="preserve">
+    <value>Gender Type</value>
+  </data>
+  <data name="TwitterGenderNumber" xml:space="preserve">
+    <value>Gender Number</value>
+  </data>
+  <data name="TwitterInterestAlreadyIsAdded" xml:space="preserve">
+    <value>Interest Already Added</value>
+  </data>
+  <data name="TwitterInterestName" xml:space="preserve">
+    <value>Interest Name</value>
+  </data>
+  <data name="TwitterInterestNumber" xml:space="preserve">
+    <value>Interest Number</value>
+  </data>
+  <data name="TwitterProfessionIsAlreadyAdded" xml:space="preserve">
+    <value>Profession Already Added</value>
+  </data>
+  <data name="TwitterProfessionName" xml:space="preserve">
+    <value>Profession Name</value>
+  </data>
+  <data name="TwitterProfessionNumber" xml:space="preserve">
+    <value>Profession Number</value>
+  </data>
+  <data name="ExcludedSubType" xml:space="preserve">
+    <value>Excluded Sub Type</value>
+  </data>
+  <data name="IncludedSubType" xml:space="preserve">
+    <value>Included Sub Type</value>
+  </data>
+  <data name="SelectExcludedSubType" xml:space="preserve">
+    <value>Select Excluded Sub Type</value>
+  </data>
+  <data name="SelectIncludedSubType" xml:space="preserve">
+    <value>Select Included Sub Type</value>
+  </data>
+  <data name="SubType" xml:space="preserve">
+    <value>SubType</value>
+  </data>
+  <data name="SubTypeAlreadyIsAdded" xml:space="preserve">
+    <value>Sub Type Already Added</value>
+  </data>
+  <data name="SubTypeName" xml:space="preserve">
+    <value>Sub Type Name</value>
+  </data>
+  <data name="SubTypeNumber" xml:space="preserve">
+    <value>Sub Type Number</value>
+  </data>
+  <data name="NewMention" xml:space="preserve">
+    <value>Just New Mentions</value>
+  </data>
+  <data name="SelectSourceTypeNewOrOld" xml:space="preserve">
+    <value>Select Only New Mentions</value>
+  </data>
+  <data name="SourceTypeJustNew" xml:space="preserve">
+    <value>New Mentions</value>
+  </data>
+  <data name="DeleteAllMentionsFromProject" xml:space="preserve">
+    <value>Delete Mentions</value>
+  </data>
+  <data name="EngagementType" xml:space="preserve">
+    <value>Engagement Type</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="TotalMentions" xml:space="preserve">
+    <value>Total Mentions</value>
+  </data>
+  <data name="MaxEndDateRange" xml:space="preserve">
+    <value>Max End Date Range</value>
+  </data>
+  <data name="MaxStartDateRange" xml:space="preserve">
+    <value>Max Start Date Range</value>
+  </data>
+  <data name="DashBoard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="ContainsTheseWords" xml:space="preserve">
+    <value>Matching Words</value>
+  </data>
+  <data name="IncludedDomain" xml:space="preserve">
+    <value>Included Domain</value>
+  </data>
+  <data name="MinMonthlyDomainVisitors" xml:space="preserve">
+    <value>Minimal Visitors</value>
+  </data>
+  <data name="NewsBarFilter" xml:space="preserve">
+    <value>News Bar</value>
+  </data>
+  <data name="SelectIncludedDomain" xml:space="preserve">
+    <value>Select Domain</value>
+  </data>
+  <data name="DomainAlreadyIsAdded" xml:space="preserve">
+    <value>Domain Already Added</value>
+  </data>
+  <data name="DomainName" xml:space="preserve">
+    <value>Domain Name</value>
+  </data>
+  <data name="DomainNumber" xml:space="preserve">
+    <value>Domain Number</value>
+  </data>
+  <data name="MinDomainSIteVisitors" xml:space="preserve">
+    <value>Minimal Visitors</value>
+  </data>
+  <data name="NoLogo" xml:space="preserve">
+    <value>No Logo</value>
+  </data>
+</root>

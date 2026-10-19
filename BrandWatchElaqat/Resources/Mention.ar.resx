@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountType" xml:space="preserve">
+    <value>نوع الحساب</value>
+  </data>
+  <data name="AddedDate" xml:space="preserve">
+    <value>تاريخ الإضافة</value>
+  </data>
+  <data name="Assignment" xml:space="preserve">
+    <value>االتكليف</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>المؤلف</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="ContentSource" xml:space="preserve">
+    <value>مصدر المحتوي</value>
+  </data>
+  <data name="Continent" xml:space="preserve">
+    <value>القارة</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>الدولة</value>
+  </data>
+  <data name="DailyVisitors" xml:space="preserve">
+    <value>عدد الزوار اليومي</value>
+  </data>
+  <data name="DeleteMention" xml:space="preserve">
+    <value>حذف المنشور</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>المجال</value>
+  </data>
+  <data name="GetMentionFromBR" xml:space="preserve">
+    <value>حدث المنشورات من براندواتش</value>
+  </data>
+  <data name="GuidNumber" xml:space="preserve">
+    <value>الرقم الموحد</value>
+  </data>
+  <data name="Impact" xml:space="preserve">
+    <value>التأثير</value>
+  </data>
+  <data name="Impressions" xml:space="preserve">
+    <value>الإنطباع</value>
+  </data>
+  <data name="Interest" xml:space="preserve">
+    <value>الإهتمامات</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="MediaType" xml:space="preserve">
+    <value>نوع الإعلام</value>
+  </data>
+  <data name="MentionDeleteTitle" xml:space="preserve">
+    <value>حذف المنشورات</value>
+  </data>
+  <data name="MentionDetails" xml:space="preserve">
+    <value>تفاصيل المنشور</value>
+  </data>
+  <data name="MentionDetailsTitle" xml:space="preserve">
+    <value>تفاصيل المنشور</value>
+  </data>
+  <data name="MentionEditTitle" xml:space="preserve">
+    <value>تحديث المنشورات</value>
+  </data>
+  <data name="MentionIndexTitle" xml:space="preserve">
+    <value>المنشورات</value>
+  </data>
+  <data name="MonthlyVisitors" xml:space="preserve">
+    <value>عدد الزوار الشهري</value>
+  </data>
+  <data name="NotReleasedToClient" xml:space="preserve">
+    <value>لم يعرض للعميل</value>
+  </data>
+  <data name="OriginalUrl" xml:space="preserve">
+    <value>أصل الرابط</value>
+  </data>
+  <data name="PageType" xml:space="preserve">
+    <value>نوع المنصة</value>
+  </data>
+  <data name="PageTypeName" xml:space="preserve">
+    <value>إسم المنصة</value>
+  </data>
+  <data name="QueryID" xml:space="preserve">
+    <value>رقم الإستعلام</value>
+  </data>
+  <data name="QueryName" xml:space="preserve">
+    <value>إسم الإستعلام</value>
+  </data>
+  <data name="ReachEstimate" xml:space="preserve">
+    <value>تقدير الوصول</value>
+  </data>
+  <data name="ReceivedDate" xml:space="preserve">
+    <value>تاريخ جلب البيانات</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="Release" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="ReleaseToClient" xml:space="preserve">
+    <value>عرض للعميل</value>
+  </data>
+  <data name="ResourceId" xml:space="preserve">
+    <value>رقم مصدر</value>
+  </data>
+  <data name="Sentiment" xml:space="preserve">
+    <value>المشاعر</value>
+  </data>
+  <data name="Snippet" xml:space="preserve">
+    <value>مقتطف</value>
+  </data>
+  <data name="SubCategories" xml:space="preserve">
+    <value>رقم القطاع</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="UpdateMention" xml:space="preserve">
+    <value>حدث المنشور</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>الرابط</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>تاريخ النهاية</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>المرشحات</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>تاريخ البداية</value>
+  </data>
+  <data name="CategoryAlradyIsAdded" xml:space="preserve">
+    <value>الفئة مضافة مسبقاً</value>
+  </data>
+  <data name="CategoryNumber" xml:space="preserve">
+    <value>رقم الفئة</value>
+  </data>
+  <data name="ContentAndMentionType" xml:space="preserve">
+    <value> المحتوي ونوع المنشور</value>
+  </data>
+  <data name="ContentSourceAlradyIsAdded" xml:space="preserve">
+    <value>مصدر المحتوي مضاف مسبقاً</value>
+  </data>
+  <data name="ContentSourceNumber" xml:space="preserve">
+    <value>رقم مصدر المحتوي</value>
+  </data>
+  <data name="ExcludeContentSource" xml:space="preserve">
+    <value>مصدر المحتوي المستثناء</value>
+  </data>
+  <data name="ExcludedCategory" xml:space="preserve">
+    <value>الفئة المستثناء</value>
+  </data>
+  <data name="ExcludedSubCategory" xml:space="preserve">
+    <value>القطاع المستثنا</value>
+  </data>
+  <data name="ExcludedTag" xml:space="preserve">
+    <value>العلامة المستثناء</value>
+  </data>
+  <data name="HasbeenSuccessfullyAdded" xml:space="preserve">
+    <value>تمت الإضافة بنجاح</value>
+  </data>
+  <data name="HasbeenSuccessfullyDeleted" xml:space="preserve">
+    <value>تم الحذف بنجاح</value>
+  </data>
+  <data name="IncludeContentSource" xml:space="preserve">
+    <value>مصدر المحتوي المضاف</value>
+  </data>
+  <data name="IncludedCategory" xml:space="preserve">
+    <value>الفئة المضافة</value>
+  </data>
+  <data name="IncludedSubCategory" xml:space="preserve">
+    <value>القطاع المضاف</value>
+  </data>
+  <data name="IncludedTag" xml:space="preserve">
+    <value>العلامة المضافة</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>الإستعلامات</value>
+  </data>
+  <data name="QueryAlradyIsAdded" xml:space="preserve">
+    <value>الإستعلام مضاف مسبقاً</value>
+  </data>
+  <data name="QueryNumber" xml:space="preserve">
+    <value>رقم الإستعلام</value>
+  </data>
+  <data name="SelectExcludedCategory" xml:space="preserve">
+    <value> إختر الفئة المستثناء </value>
+  </data>
+  <data name="SelectExcludedCountenSource" xml:space="preserve">
+    <value>إختر مصدر المحتوي المستثناء</value>
+  </data>
+  <data name="SelectExcludedSubCategory" xml:space="preserve">
+    <value> إختر القطاع المستثنا </value>
+  </data>
+  <data name="SelectExcludedTag" xml:space="preserve">
+    <value> إختر العلامة المستثناء</value>
+  </data>
+  <data name="SelectQuery" xml:space="preserve">
+    <value>إختر إستعلام</value>
+  </data>
+  <data name="SelectTag" xml:space="preserve">
+    <value> إختر العلامة</value>
+  </data>
+  <data name="SubCategoryAlradyIsAdded" xml:space="preserve">
+    <value>القطاع مضاف مسبقاً</value>
+  </data>
+  <data name="SubCategoryNumber" xml:space="preserve">
+    <value>رقم القطاع</value>
+  </data>
+  <data name="TagAlradyIsAdded" xml:space="preserve">
+    <value>العلامة مضاف مسبقاً</value>
+  </data>
+  <data name="TagNumber" xml:space="preserve">
+    <value>رقم العلامة</value>
+  </data>
+  <data name="ExcludedMentionType" xml:space="preserve">
+    <value>نوع المنشور المستثني</value>
+  </data>
+  <data name="IncludedMentionType" xml:space="preserve">
+    <value>نوع المنشور المضاف</value>
+  </data>
+  <data name="MentionType" xml:space="preserve">
+    <value>نوع المنشور</value>
+  </data>
+  <data name="MentionTypeAlradyIsAdded" xml:space="preserve">
+    <value>نوع المنشور مضاف مسبقاً</value>
+  </data>
+  <data name="MentionTypeNumber" xml:space="preserve">
+    <value>رقم المنشور</value>
+  </data>
+  <data name="SelectExcludedMentionType" xml:space="preserve">
+    <value>إختر نوع المنشور المستثني</value>
+  </data>
+  <data name="SelectIncludedMentionType" xml:space="preserve">
+    <value>إختر نوع المنشور المضاف</value>
+  </data>
+  <data name="BasicFilters" xml:space="preserve">
+    <value>المرشحات الأساسية</value>
+  </data>
+  <data name="EmotionalityName" xml:space="preserve">
+    <value>التفاعل العاطفية</value>
+  </data>
+  <data name="EmotionalityNumber" xml:space="preserve">
+    <value>رقم التفاعل العاطفية</value>
+  </data>
+  <data name="ExcludedEmotionality" xml:space="preserve">
+    <value>التفاعل العاطفية المستثنا</value>
+  </data>
+  <data name="ExcludedHarm" xml:space="preserve">
+    <value>التفاعل المؤذية المستثنا</value>
+  </data>
+  <data name="ExcludedOverall" xml:space="preserve">
+    <value>التفاعل إجمالي المستثنا</value>
+  </data>
+  <data name="HarmName" xml:space="preserve">
+    <value>التفاعل المؤذي</value>
+  </data>
+  <data name="HarmNumber" xml:space="preserve">
+    <value>رقم التفاعل المؤذي</value>
+  </data>
+  <data name="IncludedEmotionality" xml:space="preserve">
+    <value>التفاعل العاطفية المضافة</value>
+  </data>
+  <data name="IncludedHarm" xml:space="preserve">
+    <value>التفاعل المؤذي المضاف</value>
+  </data>
+  <data name="IncludedOverall" xml:space="preserve">
+    <value>التفاعل الإجمالي المضافة</value>
+  </data>
+  <data name="OverAllName" xml:space="preserve">
+    <value>التفاعل الإجمالي</value>
+  </data>
+  <data name="OverAllNumber" xml:space="preserve">
+    <value>رقم التفاعل الإجمالي</value>
+  </data>
+  <data name="ReactEmotionalityAlradyIsAdded" xml:space="preserve">
+    <value>المشاعر العاطفية مضافة مسبقاً</value>
+  </data>
+  <data name="ReactHarmAlradyIsAdded" xml:space="preserve">
+    <value>المشاعر المؤذية مضافة مسبقاً</value>
+  </data>
+  <data name="ReactOverAllAlradyIsAdded" xml:space="preserve">
+    <value>المشاعر الإجمالي مضافة مسبقاً</value>
+  </data>
+  <data name="ReactScore" xml:space="preserve">
+    <value>نتيجة التفاعل</value>
+  </data>
+  <data name="ReactScoreType" xml:space="preserve">
+    <value>نوع التفاعل</value>
+  </data>
+  <data name="SelectExcludedEmotionality" xml:space="preserve">
+    <value>إختر التفاعل العاطفي المستثني</value>
+  </data>
+  <data name="SelectExcludedHarm" xml:space="preserve">
+    <value>إختر التفاعل المؤذي المستثني</value>
+  </data>
+  <data name="SelectExcludedOverall" xml:space="preserve">
+    <value>إختر التفاعل الإجمالي المستثني</value>
+  </data>
+  <data name="SelectIncludedEmotionality" xml:space="preserve">
+    <value>إختر التفاعل العاطفي المضاف</value>
+  </data>
+  <data name="SelectIncludedHarm" xml:space="preserve">
+    <value>إختر التفاعل الموذي المضاف</value>
+  </data>
+  <data name="SelectIncludedOverall" xml:space="preserve">
+    <value>إختر التفاعل الإجمالي المضاف</value>
+  </data>
+  <data name="Emotion" xml:space="preserve">
+    <value>العاطفة</value>
+  </data>
+  <data name="EmotionAlreadyIsAdded" xml:space="preserve">
+    <value>تمت إضافة العاطفة مسبقاً</value>
+  </data>
+  <data name="EmotionNumber" xml:space="preserve">
+    <value>رقم العواطف</value>
+  </data>
+  <data name="Emotions" xml:space="preserve">
+    <value>العواطف</value>
+  </data>
+  <data name="EngagementScore" xml:space="preserve">
+    <value>مستوي المشاركة</value>
+  </data>
+  <data name="ExcludeEmotions" xml:space="preserve">
+    <value>العواطف المستبعدة</value>
+  </data>
+  <data name="IncludeEmotions" xml:space="preserve">
+    <value>العواطف المشمولة</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>الحد الأقصى</value>
+  </data>
+  <data name="MaxEngagementScore" xml:space="preserve">
+    <value>الحد الأقصى للمشاركة</value>
+  </data>
+  <data name="Min" xml:space="preserve">
+    <value>الحد الأدنى</value>
+  </data>
+  <data name="MinEngagementScore" xml:space="preserve">
+    <value>الحد الأدنى للمشاركة</value>
+  </data>
+  <data name="SelectExcludeEmotions" xml:space="preserve">
+    <value>اختر العواطف المستبعدة</value>
+  </data>
+  <data name="SelectIncludeEmotions" xml:space="preserve">
+    <value>اختر العواطف المضمنة</value>
+  </data>
+  <data name="SelectSentiment" xml:space="preserve">
+    <value>إختر المشاعر</value>
+  </data>
+  <data name="SentimentAlreadyIsAdded" xml:space="preserve">
+    <value>المشاعر مضاف مسبقاً</value>
+  </data>
+  <data name="SentimentAndEmotion" xml:space="preserve">
+    <value>المشاعر</value>
+  </data>
+  <data name="SentimentNumber" xml:space="preserve">
+    <value>رقم المشاعر</value>
+  </data>
+  <data name="AuthorListAlreadyIsAdded" xml:space="preserve">
+    <value>قائمة المؤلفين تمت إضافتها من قبل</value>
+  </data>
+  <data name="AuthorListName" xml:space="preserve">
+    <value>اسم قائمة المؤلف</value>
+  </data>
+  <data name="AuthorListNumber" xml:space="preserve">
+    <value>رقم قائمة المؤلف</value>
+  </data>
+  <data name="ExactMatch" xml:space="preserve">
+    <value>المطابقة التامة</value>
+  </data>
+  <data name="ExcludeAuthorLists" xml:space="preserve">
+    <value>قوائم المؤلفين المستبعدين</value>
+  </data>
+  <data name="ExcludeAuthorName" xml:space="preserve">
+    <value>استبعاد اسم المؤلف</value>
+  </data>
+  <data name="ExcludedLocation" xml:space="preserve">
+    <value>الموقع المستبعد</value>
+  </data>
+  <data name="ExcludedSocialPanel" xml:space="preserve">
+    <value>استبعاد اللوحة الاجتماعية</value>
+  </data>
+  <data name="IncludeAuthorLists" xml:space="preserve">
+    <value>تضمين قوائم المؤلفين</value>
+  </data>
+  <data name="IncludeAuthorName" xml:space="preserve">
+    <value>تضمين اسم المؤلف</value>
+  </data>
+  <data name="IncludedLocation" xml:space="preserve">
+    <value>الموقع المتضمن</value>
+  </data>
+  <data name="IncludedSocialPanel" xml:space="preserve">
+    <value>تضمين اللوحة الاجتماعية</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>الموقع الجغرافي</value>
+  </data>
+  <data name="LocationIsAlreadyAdded" xml:space="preserve">
+    <value>تمت إضافة الموقع من قبل</value>
+  </data>
+  <data name="LocationName" xml:space="preserve">
+    <value>اسم الموقع</value>
+  </data>
+  <data name="LocationNumber" xml:space="preserve">
+    <value>رقم الموقع</value>
+  </data>
+  <data name="SelectExcludeAuthorLists" xml:space="preserve">
+    <value>حدد قوائم المؤلفين المستبعدين</value>
+  </data>
+  <data name="SelectExcludedLocation" xml:space="preserve">
+    <value>حدد الموقع المستبعد</value>
+  </data>
+  <data name="SelectExcludedSocialPanel" xml:space="preserve">
+    <value>حدد اللوحة الاجتماعية المستبعدة</value>
+  </data>
+  <data name="SelectIncludeAuthorLists" xml:space="preserve">
+    <value>حدد قوائم المؤلفين المضمنة</value>
+  </data>
+  <data name="SelectIncludedLocation" xml:space="preserve">
+    <value>حدد الموقع المضمن</value>
+  </data>
+  <data name="SelectIncludedSocialPanel" xml:space="preserve">
+    <value>حدد اللوحة الاجتماعية المضمنة</value>
+  </data>
+  <data name="SocialPanalAlradyIsAdded" xml:space="preserve">
+    <value>اللوحة الاجتماعية مضاف مسبقاً</value>
+  </data>
+  <data name="SocialPanel" xml:space="preserve">
+    <value>اللوحة الاجتماعية</value>
+  </data>
+  <data name="SocialPanelName" xml:space="preserve">
+    <value>اسم اللوحة الاجتماعية</value>
+  </data>
+  <data name="SocialPanelNumber" xml:space="preserve">
+    <value>رقم اللوحة الاجتماعية</value>
+  </data>
+  <data name="Checked" xml:space="preserve">
+    <value>تم الفحص</value>
+  </data>
+  <data name="ExcludedSiteList" xml:space="preserve">
+    <value>استبعاد قائمة المواقع</value>
+  </data>
+  <data name="ExcludeLanguage" xml:space="preserve">
+    <value>استبعاد اللغة</value>
+  </data>
+  <data name="IncludedSiteList" xml:space="preserve">
+    <value>تضمين قائمة المواقع</value>
+  </data>
+  <data name="IncludeLanguage" xml:space="preserve">
+    <value>تضمين اللغة</value>
+  </data>
+  <data name="LanguageAlreadyIsAdded" xml:space="preserve">
+    <value>تمت إضافة اللغة من قبل</value>
+  </data>
+  <data name="LanguageName" xml:space="preserve">
+    <value>اسم اللغة</value>
+  </data>
+  <data name="LanguageNumber" xml:space="preserve">
+    <value>رقم اللغة</value>
+  </data>
+  <data name="MaxDailyVisitors" xml:space="preserve">
+    <value>الحد الأقصى للزوار يوميا</value>
+  </data>
+  <data name="MaxImpact" xml:space="preserve">
+    <value>الحد الأقصى من التأثير</value>
+  </data>
+  <data name="MaxMonthlyVisitors" xml:space="preserve">
+    <value>الحد الأقصى للزوار شهريا</value>
+  </data>
+  <data name="MaxRache" xml:space="preserve">
+    <value>الحد الأقصى للوصول</value>
+  </data>
+  <data name="MinDailyVisitors" xml:space="preserve">
+    <value>الحد الأدنى للزوار يوميا</value>
+  </data>
+  <data name="MinImpact" xml:space="preserve">
+    <value>الحد الأدنى من التأثير</value>
+  </data>
+  <data name="MinMonthlyVisitors" xml:space="preserve">
+    <value>الحد الأدنى للزوار شهريا</value>
+  </data>
+  <data name="MinRache" xml:space="preserve">
+    <value>الحد الأدنى من الوصول</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>أولوية</value>
+  </data>
+  <data name="Reach" xml:space="preserve">
+    <value>الوصول</value>
+  </data>
+  <data name="ReachAndImpact" xml:space="preserve">
+    <value>الوصول والتأثير</value>
+  </data>
+  <data name="SelectAssignment" xml:space="preserve">
+    <value>اختر االتكليف</value>
+  </data>
+  <data name="SelectChecked" xml:space="preserve">
+    <value>اختر تم التحقق منه</value>
+  </data>
+  <data name="SelectExcludedSiteList" xml:space="preserve">
+    <value>اختر استبعاد قائمة المواقع</value>
+  </data>
+  <data name="SelectExcludeLanguage" xml:space="preserve">
+    <value>حدد اللغة المستبعدة</value>
+  </data>
+  <data name="SelectIncludedSiteList" xml:space="preserve">
+    <value>اختر تضمين قائمة المواقع</value>
+  </data>
+  <data name="SelectIncludeLanguage" xml:space="preserve">
+    <value>حدد اللغة المضمنة</value>
+  </data>
+  <data name="SelectPriority" xml:space="preserve">
+    <value>اختر الأولوية</value>
+  </data>
+  <data name="SelectStatus" xml:space="preserve">
+    <value>اختر الحالة</value>
+  </data>
+  <data name="Site" xml:space="preserve">
+    <value>الموقع الإلكتروني</value>
+  </data>
+  <data name="SiteListAlreadyIsAdded" xml:space="preserve">
+    <value>قائمة المواقع تمت إضافتها من قبل</value>
+  </data>
+  <data name="SiteListName" xml:space="preserve">
+    <value>اسم قائمة الموقع</value>
+  </data>
+  <data name="SiteListNumber" xml:space="preserve">
+    <value>رقم قائمة الموقع</value>
+  </data>
+  <data name="StarredMentions" xml:space="preserve">
+    <value>المنشورات المميزة بنجمة</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="WorkflowAndStarred" xml:space="preserve">
+    <value>سير العمل والنجمة</value>
+  </data>
+  <data name="AuthorKarma" xml:space="preserve">
+    <value>كارما المؤلف</value>
+  </data>
+  <data name="Bluesky" xml:space="preserve">
+    <value>بلوسكي</value>
+  </data>
+  <data name="ClientOrProjectDetailsAreMissing" xml:space="preserve">
+    <value>تفاصيل العميل أو المشروع مفقودة، يرجى مراجعة تفاصيل المشروع أو العميل ثم المحاولة مرة أخرى.</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>التعليقات</value>
+  </data>
+  <data name="ContainsPoll" xml:space="preserve">
+    <value>يحتوي على استطلاع</value>
+  </data>
+  <data name="ExcludedTwitterVerificationType" xml:space="preserve">
+    <value>نوع التحقق المستبعد</value>
+  </data>
+  <data name="ExcludeFilterBySubreddit" xml:space="preserve">
+    <value>استبعاد وفقا للموضوع</value>
+  </data>
+  <data name="ExcludeFilterBySubredditTopic" xml:space="preserve">
+    <value>استبعاد التصفية حسب موضوع رديت</value>
+  </data>
+  <data name="ExcludeSubreddit" xml:space="preserve">
+    <value>استبعاد حسب رديت</value>
+  </data>
+  <data name="FaceBook" xml:space="preserve">
+    <value>فيسبوك</value>
+  </data>
+  <data name="FilterBySubreddit" xml:space="preserve">
+    <value>تصفية حسب رديت</value>
+  </data>
+  <data name="Followers" xml:space="preserve">
+    <value>المتابعون</value>
+  </data>
+  <data name="Following" xml:space="preserve">
+    <value>يتبع</value>
+  </data>
+  <data name="IncludedTwitterVerificationType" xml:space="preserve">
+    <value>نوع التحقق المتضمن</value>
+  </data>
+  <data name="IncludeFilterBySubreddit" xml:space="preserve">
+    <value>تضمين وفقا للموضوع</value>
+  </data>
+  <data name="IncludeFilterBySubredditTopic" xml:space="preserve">
+    <value>تضمين التصفية حسب موضوع رديت</value>
+  </data>
+  <data name="Instagram" xml:space="preserve">
+    <value>انستغرام</value>
+  </data>
+  <data name="Interactions" xml:space="preserve">
+    <value>التفاعلات</value>
+  </data>
+  <data name="Likes" xml:space="preserve">
+    <value>الإعجابات</value>
+  </data>
+  <data name="MaxAuthorKarma" xml:space="preserve">
+    <value>الحد الأقصى من كارما المؤلف</value>
+  </data>
+  <data name="MaxComments" xml:space="preserve">
+    <value>الحد الأقصى من الانطباعات</value>
+  </data>
+  <data name="MaxFollowers" xml:space="preserve">
+    <value>الحد الأقصى من المتابعين</value>
+  </data>
+  <data name="MaxFollowing" xml:space="preserve">
+    <value>الحد الأقصى من المتابعة</value>
+  </data>
+  <data name="MaxImpressions" xml:space="preserve">
+    <value>الحد الأقصى من الانطباعات</value>
+  </data>
+  <data name="MaxInteractions" xml:space="preserve">
+    <value>الحد الأقصى من التفاعلات</value>
+  </data>
+  <data name="MaxLikes" xml:space="preserve">
+    <value>الحد الأقصى من الإعجابات</value>
+  </data>
+  <data name="MaxPosts" xml:space="preserve">
+    <value>الحد الأقصى من المنشورات</value>
+  </data>
+  <data name="MaxQuotes" xml:space="preserve">
+    <value>الحد الأقصى من الاقتباسات</value>
+  </data>
+  <data name="MaxRedditCommentCount" xml:space="preserve">
+    <value>الحد الأقصى من التعليقات</value>
+  </data>
+  <data name="MaxRedditScore" xml:space="preserve">
+    <value>الحد الأقصى من نقاط رديت</value>
+  </data>
+  <data name="MaxReplies" xml:space="preserve">
+    <value>الحد الأقصى من الردود</value>
+  </data>
+  <data name="MaxReposts" xml:space="preserve">
+    <value>الحد الأقصى لإعادة النشر</value>
+  </data>
+  <data name="MaxShares" xml:space="preserve">
+    <value>الحد الأقصى من المشاركة</value>
+  </data>
+  <data name="MaxSubRedditSubscribers" xml:space="preserve">
+    <value>الحد الأقصى من المشتركين</value>
+  </data>
+  <data name="MaxTotalPosts" xml:space="preserve">
+    <value>الحد الأقصى لمجموع المشاركات</value>
+  </data>
+  <data name="MinAuthorKarma" xml:space="preserve">
+    <value>الحد الأدنى من كارما المؤلف</value>
+  </data>
+  <data name="MinComments" xml:space="preserve">
+    <value>الحد الأدنى من التعليقات</value>
+  </data>
+  <data name="MinFollowers" xml:space="preserve">
+    <value>الحد الأدنى من المتابعين</value>
+  </data>
+  <data name="MinFollowing" xml:space="preserve">
+    <value>الحد الأدنى من المتابعة</value>
+  </data>
+  <data name="MinImpressions" xml:space="preserve">
+    <value>الحد الأدنى من الانطباعات</value>
+  </data>
+  <data name="MinInteractions" xml:space="preserve">
+    <value>الحد الأدنى من التفاعلات</value>
+  </data>
+  <data name="MinLikes" xml:space="preserve">
+    <value>الحد الأدنى من الإعجابات</value>
+  </data>
+  <data name="MinPosts" xml:space="preserve">
+    <value>الحد الأدنى من المنشورات</value>
+  </data>
+  <data name="MinQuotes" xml:space="preserve">
+    <value>الحد الأدنى من الاقتباسات</value>
+  </data>
+  <data name="MinRedditCommentCount" xml:space="preserve">
+    <value>الحد الأدنى من التعليقات</value>
+  </data>
+  <data name="MinRedditScore" xml:space="preserve">
+    <value>الحد الأدنى من نقاط رديت</value>
+  </data>
+  <data name="MinReplies" xml:space="preserve">
+    <value>الحد الأدنى من الردود</value>
+  </data>
+  <data name="MinReposts" xml:space="preserve">
+    <value>الحد الأدنى من إعادة النشر</value>
+  </data>
+  <data name="MinShares" xml:space="preserve">
+    <value>الحد الأدنى من المشاركة</value>
+  </data>
+  <data name="MinSubRedditSubscribers" xml:space="preserve">
+    <value>الحد الأدنى من المشتركين</value>
+  </data>
+  <data name="MinTotalPosts" xml:space="preserve">
+    <value>الحد الأدنى لمجموع المشاركات</value>
+  </data>
+  <data name="NSFW" xml:space="preserve">
+    <value>غير آمن للعمل</value>
+  </data>
+  <data name="Posts" xml:space="preserve">
+    <value>المنشورات</value>
+  </data>
+  <data name="PublicationName" xml:space="preserve">
+    <value>اسم النشر</value>
+  </data>
+  <data name="Quotes" xml:space="preserve">
+    <value>الاقتباسات</value>
+  </data>
+  <data name="Reddit" xml:space="preserve">
+    <value>رديت</value>
+  </data>
+  <data name="RedditCommentCount" xml:space="preserve">
+    <value>رديت عدد التعليقات</value>
+  </data>
+  <data name="RedditScore" xml:space="preserve">
+    <value>نقاط رديت</value>
+  </data>
+  <data name="Replies" xml:space="preserve">
+    <value>الردود</value>
+  </data>
+  <data name="Reposts" xml:space="preserve">
+    <value>إعادة النشر</value>
+  </data>
+  <data name="SelectContainsPoll" xml:space="preserve">
+    <value>اختر يحتوي على استطلاع</value>
+  </data>
+  <data name="SelectExcludedTwitterVerificationType" xml:space="preserve">
+    <value>اختر نوع التحقق المستبعد</value>
+  </data>
+  <data name="SelectExcludeSubredditTopic" xml:space="preserve">
+    <value>اختر استبعاد الموضوع</value>
+  </data>
+  <data name="SelectIncludedCountenSource" xml:space="preserve">
+    <value>إختر مصدر المحتوي المضمنة</value>
+  </data>
+  <data name="SelectIncludedTwitterVerificationType" xml:space="preserve">
+    <value>اختر نوع التحقق المضمن</value>
+  </data>
+  <data name="SelectIncludeSubredditTopic" xml:space="preserve">
+    <value>اختر تضمين الموضوع</value>
+  </data>
+  <data name="SelectNSFW" xml:space="preserve">
+    <value>إختر غير آمن للعمل</value>
+  </data>
+  <data name="SelectTwitterVerification" xml:space="preserve">
+    <value>اختر التحقق</value>
+  </data>
+  <data name="SelectUserRole" xml:space="preserve">
+    <value>اختر دور المستخدم</value>
+  </data>
+  <data name="Shares" xml:space="preserve">
+    <value>المشاركة</value>
+  </data>
+  <data name="SubRedditSubscribers" xml:space="preserve">
+    <value>المشتركين</value>
+  </data>
+  <data name="SubredditTopicAlreadyAdded" xml:space="preserve">
+    <value>الموضوع أضيف من قبل</value>
+  </data>
+  <data name="SubredditTopicName" xml:space="preserve">
+    <value>اسم الموضوع</value>
+  </data>
+  <data name="SubredditTopicNumber" xml:space="preserve">
+    <value>رقم الموضوع</value>
+  </data>
+  <data name="TotalPosts" xml:space="preserve">
+    <value>إجمالي المشاركات</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>اكس( تويتر)</value>
+  </data>
+  <data name="TwitterVerification" xml:space="preserve">
+    <value>التحقق</value>
+  </data>
+  <data name="TwitterVerificationTypeAlreadyIsAdded" xml:space="preserve">
+    <value>نوع التحقق تمت إضافته من قبل</value>
+  </data>
+  <data name="TwitterVerificationTypeName" xml:space="preserve">
+    <value>نوع التحقق</value>
+  </data>
+  <data name="TwitterVerificationTypeNumber" xml:space="preserve">
+    <value>رقم نوع التحقق</value>
+  </data>
+  <data name="UserRole" xml:space="preserve">
+    <value>دور المستخدم</value>
+  </data>
+  <data name="GetMentionFilterButton" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="AccountTypeAlreadyAdded" xml:space="preserve">
+    <value>تمت إضافة نوع الحساب بالفعل من قبل</value>
+  </data>
+  <data name="AccountTypeName" xml:space="preserve">
+    <value>اسم نوع الحساب</value>
+  </data>
+  <data name="AccountTypeNumber" xml:space="preserve">
+    <value>رقم نوع الحساب</value>
+  </data>
+  <data name="ExcludedAccountType" xml:space="preserve">
+    <value>نوع الحساب المستبعد</value>
+  </data>
+  <data name="ExcludeTwitterInterest" xml:space="preserve">
+    <value>الإهتمامات المستبعدة</value>
+  </data>
+  <data name="ExcludeTwitterProfessions" xml:space="preserve">
+    <value>المهن المستبعدة</value>
+  </data>
+  <data name="IncludedAccountType" xml:space="preserve">
+    <value>نوع الحساب المتضمن</value>
+  </data>
+  <data name="IncludeTwitterInterest" xml:space="preserve">
+    <value>الإهتمامات المتضمنة</value>
+  </data>
+  <data name="IncludeTwitterProfessions" xml:space="preserve">
+    <value>المهن المدرجة</value>
+  </data>
+  <data name="SelectExcludeAccountType" xml:space="preserve">
+    <value>اختر نوع الحساب المستبعد</value>
+  </data>
+  <data name="SelectExcludeTwitterInterest" xml:space="preserve">
+    <value>إختر الإهتمام المستبعدة</value>
+  </data>
+  <data name="SelectExcludeTwitterProfession" xml:space="preserve">
+    <value>اختر المهن المستبعدة</value>
+  </data>
+  <data name="SelectIncludeAccountType" xml:space="preserve">
+    <value>اختر نوع الحساب المضمن</value>
+  </data>
+  <data name="SelectIncludeTwitterInterest" xml:space="preserve">
+    <value>إختر الإهتمام المتضمن</value>
+  </data>
+  <data name="SelectIncludeTwitterProfession" xml:space="preserve">
+    <value>اختر المهن المضمنة</value>
+  </data>
+  <data name="SelectTwitterGender" xml:space="preserve">
+    <value>اختر نوع الجنس</value>
+  </data>
+  <data name="TwitterGender" xml:space="preserve">
+    <value>الجنس</value>
+  </data>
+  <data name="TwitterGenderAlreadyIsAdded" xml:space="preserve">
+    <value>تمت إضافة نوع الجنس من قبل</value>
+  </data>
+  <data name="TwitterGenderName" xml:space="preserve">
+    <value>نوع الجنس</value>
+  </data>
+  <data name="TwitterGenderNumber" xml:space="preserve">
+    <value>رقم نوع الجنس</value>
+  </data>
+  <data name="TwitterInterestAlreadyIsAdded" xml:space="preserve">
+    <value>رتمت إضافة الإهتمام من قبل</value>
+  </data>
+  <data name="TwitterInterestName" xml:space="preserve">
+    <value>إسم الإهتمام</value>
+  </data>
+  <data name="TwitterInterestNumber" xml:space="preserve">
+    <value>رقم الإهتمام</value>
+  </data>
+  <data name="TwitterProfessionIsAlreadyAdded" xml:space="preserve">
+    <value>تمت إضافة المهنة بالفعل من قبل</value>
+  </data>
+  <data name="TwitterProfessionName" xml:space="preserve">
+    <value>اسم المهنة</value>
+  </data>
+  <data name="TwitterProfessionNumber" xml:space="preserve">
+    <value>رقم المهنة</value>
+  </data>
+  <data name="ExcludedSubType" xml:space="preserve">
+    <value>نوع فرعي المستبعد</value>
+  </data>
+  <data name="IncludedSubType" xml:space="preserve">
+    <value>نوع فرعي متضمن</value>
+  </data>
+  <data name="SelectExcludedSubType" xml:space="preserve">
+    <value>إختر نوع فرعي المستبعد</value>
+  </data>
+  <data name="SelectIncludedSubType" xml:space="preserve">
+    <value>إختر نوع فرعي المتضمن</value>
+  </data>
+  <data name="SubType" xml:space="preserve">
+    <value>نوع فرعي</value>
+  </data>
+  <data name="SubTypeAlreadyIsAdded" xml:space="preserve">
+    <value>النوع فرعي مضاف مسبقاً</value>
+  </data>
+  <data name="SubTypeName" xml:space="preserve">
+    <value>إسم النوع فرعي</value>
+  </data>
+  <data name="SubTypeNumber" xml:space="preserve">
+    <value>رقم النوع فرعي</value>
+  </data>
+  <data name="NewMention" xml:space="preserve">
+    <value>فقط المشورات الجديدة</value>
+  </data>
+  <data name="SelectSourceTypeNewOrOld" xml:space="preserve">
+    <value>إختر نوع المنشور جديد</value>
+  </data>
+  <data name="SourceTypeJustNew" xml:space="preserve">
+    <value>نوع المنشور  جديد</value>
+  </data>
+  <data name="DeleteAllMentionsFromProject" xml:space="preserve">
+    <value>حذف المنشورات</value>
+  </data>
+  <data name="EngagementType" xml:space="preserve">
+    <value>نوع المشاركة</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>الجنس</value>
+  </data>
+  <data name="TotalMentions" xml:space="preserve">
+    <value>إجمالي المنشورات</value>
+  </data>
+  <data name="MaxEndDateRange" xml:space="preserve">
+    <value>الحد الأقصى لنطاق تاريخ الانتهاء</value>
+  </data>
+  <data name="MaxStartDateRange" xml:space="preserve">
+    <value>الحد الأقصى لنطاق تاريخ البدء</value>
+  </data>
+  <data name="DashBoard" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+  <data name="ContainsTheseWords" xml:space="preserve">
+    <value>مطابقة الكلمات</value>
+  </data>
+  <data name="IncludedDomain" xml:space="preserve">
+    <value>المجالات المضمنة</value>
+  </data>
+  <data name="MinMonthlyDomainVisitors" xml:space="preserve">
+    <value>الحد الأدنى من الزوار</value>
+  </data>
+  <data name="NewsBarFilter" xml:space="preserve">
+    <value>شريط الأخبار</value>
+  </data>
+  <data name="SelectIncludedDomain" xml:space="preserve">
+    <value>حدد المجال</value>
+  </data>
+  <data name="DomainAlreadyIsAdded" xml:space="preserve">
+    <value>تمت إضافة المجال من قبل</value>
+  </data>
+  <data name="DomainName" xml:space="preserve">
+    <value>اسم المجال</value>
+  </data>
+  <data name="DomainNumber" xml:space="preserve">
+    <value>رقم المجال</value>
+  </data>
+  <data name="MinDomainSIteVisitors" xml:space="preserve">
+    <value>الحد الأدنى من الزوار</value>
+  </data>
+  <data name="NoLogo" xml:space="preserve">
+    <value>لا يوجد شعار</value>
+  </data>
+</root>
